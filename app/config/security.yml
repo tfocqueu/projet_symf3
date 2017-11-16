@@ -28,3 +28,6 @@ security:
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/, role: ROLE_ADMIN }
+        - { path: ^/stages, role: ROLE_USER }
+        - { path: ^/entreprises, role: ROLE_USER }
+        - { path: ^/suivi, role: ROLE_USER }
