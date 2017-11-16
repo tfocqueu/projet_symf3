@@ -1,13 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Saint-Vincent{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ asset('bundles/project/css/styleperso.css') }}">
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+<div class="container">
+    <div class="col-md-12 jumbotron">
+        <img class="logo" src="{{ asset('bundles/project/images/logo.png')}}">
+        <h2> Plateforme de Gestion des stages</h2>
+        <h4> Lorem ipsum dolor sit amet, consctetur adipiscing elit.</h4>
+
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default"> Stages </button>
+            <button type="button" class="btn btn-default"> Entreprises</button>
+            <button type="button" class="btn btn-default"> Suivi scolarité</button>
+        </div>
+        <div class="btn connexion">
+            {% if is_granted('IS_AUTHENTIFICATED_FULLY') %}
+                <button type="button" class="btn btn-default"> test </button>
+            {% else %}
+                <a href="{{path('fos_user_security_login')}}"> <button type="button" class="btn btn-default"> Connexion </button> </a>
+            {% endif %}
+        </div>
+    </div>
+
+    {% block body %}{% endblock %}
+
+    <div class="col-md-12 jumbotron">
+        <h2> Gestion des Stages </h2>
+        <p> <a> MENTION LÉGALES </a> | <a class="footer"> POLITIQUE DE COOKIES </a> Lycée privé Saint-Vincent </p>
+    </div>
+
+</div>
+{% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+{% endblock %}
+</body>
 </html>
