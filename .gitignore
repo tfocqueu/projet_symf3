@@ -16,6 +16,7 @@
 /vendor/
 /web/bundles/
 /.idea/*
+.idea/workspace.xml
 
 # Backup entities generated with doctrine:generate:entities command
 
