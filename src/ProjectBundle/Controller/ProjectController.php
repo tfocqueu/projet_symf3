@@ -19,4 +19,12 @@ class ProjectController extends Controller
         $user = $this->container->get('security.token_storage')->getToken()->getUser();
         return $this->render('ProjectBundle:ProjectFront:accueil.html.twig', array('user' => $user));
     }
+
+    /**
+     * @Route("/stage",name="searchstage")
+     */
+    public function searchStageAction()
+    {
+        return $this->render('ProjectBundle:ProjectFront:searchstage.html.twig');
+    }
 }

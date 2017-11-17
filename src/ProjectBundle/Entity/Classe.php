@@ -35,6 +35,10 @@ class Classe
      */
     private $designation;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="ProjectBundle\Entity\Promo",cascade={"persist"})
+     */
+    private $laPromo;
 
     /**
      * Get id
