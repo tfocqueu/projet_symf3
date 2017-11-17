@@ -17,9 +17,9 @@
         <h4> Lorem ipsum dolor sit amet, consctetur adipiscing elit.</h4>
 
         <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default"> Stages </button>
-            <button type="button" class="btn btn-default"> Entreprises</button>
-            <button type="button" class="btn btn-default"> Suivi scolarité</button>
+            <a href="{{path('searchstage')}}"> <button type="button" class="btn btn-default"> Stages </button> </a>
+            <a href="{{path('searchentreprise')}}"> <button type="button" class="btn btn-default"> Entreprises</button> </a>
+            <a href="{{path('searchsuivi')}}"> <button type="button" class="btn btn-default"> Suivi scolarité</button> </a>
         </div>
         <div class="btn connexion">
             {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}

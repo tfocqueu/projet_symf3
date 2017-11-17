@@ -1,0 +1,26 @@
+{% extends '::base.html.twig' %}
+
+{% block body  %}
+    <div class="left">
+        <div class="btn-group-vertical" role="group">
+            <button type="button" class="btn btn-danger">top</button>
+            <button type="button" class="btn btn-danger">Mid</button>
+            <button type="button" class="btn btn-danger">bot</button>
+        </div>
+    </div>
+    <div class="mid">
+        <h2>Gestion des suivis</h2>
+        <h3>rechercher un élèves</h3>
+
+        <p>Classe : </p>
+        <select name="classe" id="class">
+            {# for class in classes #}
+            {# endfor #}
+        </select>
+        <p>Eleve</p>
+        <select name="students" id="student">
+            {# for student in users #}
+            {# endfor #}
+        </select>
+    </div>
+{% endblock %}

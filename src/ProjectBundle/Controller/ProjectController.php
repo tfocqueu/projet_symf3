@@ -25,6 +25,26 @@ class ProjectController extends Controller
      */
     public function searchStageAction()
     {
-        return $this->render('ProjectBundle:ProjectFront:searchstage.html.twig');
+        $userManager = $this->container->get('fos_user.user_manager');
+        $user = $this->container->get('security.token_storage')->getToken()->getUser();
+        return $this->render('ProjectBundle:ProjectFront:searchstage.html.twig', array('user' => $user));
+    }
+    /**
+     * @Route("/entreprise",name="searchentreprise")
+     */
+    public function searchEntrepriseAction()
+    {
+        $userManager = $this->container->get('fos_user.user_manager');
+        $user = $this->container->get('security.token_storage')->getToken()->getUser();
+        return $this->render('ProjectBundle:ProjectFront:searchentreprise.html.twig', array('user' => $user));
+    }
+    /**
+     * @Route("/suivi",name="searchsuivi")
+     */
+    public function searchSuiviAction()
+    {
+        $userManager = $this->container->get('fos_user.user_manager');
+        $user = $this->container->get('security.token_storage')->getToken()->getUser();
+        return $this->render('ProjectBundle:ProjectFront:searchsuivi.html.twig', array('user' => $user));
     }
 }
