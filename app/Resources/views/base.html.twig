@@ -22,8 +22,9 @@
             <button type="button" class="btn btn-default"> Suivi scolarité</button>
         </div>
         <div class="btn connexion">
-            {% if is_granted('IS_AUTHENTIFICATED_FULLY') %}
-                <button type="button" class="btn btn-default"> test </button>
+            {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                <p> Bonjour {{ user.username }}</p>
+                <a href="{{path('fos_user_security_logout')}}"> <button type="button" class="btn btn-default"> Déconnexion </button> </a>
             {% else %}
                 <a href="{{path('fos_user_security_login')}}"> <button type="button" class="btn btn-default"> Connexion </button> </a>
                 <a href="{{path('fos_user_registration_register')}}"> <button type="button" class="btn btn-default"> Inscription </button> </a>

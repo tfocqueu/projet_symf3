@@ -14,6 +14,9 @@ class ProjectController extends Controller
 
     public function indexAction()
     {
-        return $this->render('ProjectBundle:ProjectFront:accueil.html.twig');
+        $userManager = $this->container->get('fos_user.user_manager');
+
+        $user = $this->container->get('security.token_storage')->getToken()->getUser();
+        return $this->render('ProjectBundle:ProjectFront:accueil.html.twig', array('user' => $user));
     }
 }
