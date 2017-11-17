@@ -82,11 +82,7 @@ class SecurityController extends BaseController
 
         $lastUsername = (null === $session) ? '' : $session->get($lastUsernameKey);
 
-        $csrfToken = $this->has('security.csrf.token_manager')
-
-            ? $this->get('security.csrf.token_manager')->getToken('authenticate')->getValue()
-
-            : null;
+        $csrfToken = $this->has('security.csrf.token_manager') ? $this->get('security.csrf.token_manager')->getToken('authenticate')->getValue() : null;
 
         return $this->renderLogin(array(
 
@@ -173,16 +169,11 @@ class SecurityController extends BaseController
             $error = null; // The value does not come from the security component.
 
         }
-
         // last username entered by the user
 
         $lastUsername = (null === $session) ? '' : $session->get($lastUsernameKey);
 
-        $csrfToken = $this->has('security.csrf.token_manager')
-
-            ? $this->get('security.csrf.token_manager')->getToken('authenticate')->getValue()
-
-            : null;
+        $csrfToken = $this->has('security.csrf.token_manager') ? $this->get('security.csrf.token_manager')->getToken('authenticate')->getValue() : null;
 
         return $this->container->get('templating')->renderResponse('FOSUserBundle:Security:login_content.html.twig', array(
 

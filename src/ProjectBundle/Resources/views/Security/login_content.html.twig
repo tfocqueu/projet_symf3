@@ -27,10 +27,13 @@
                             <input type="password" id="password" name="_password" required="required" class="form-control" placeholder="Mot de passe" />
                         </div>
                         <div class="checkbox">
-                            <span class="character-checkbox" onclick="showPassword()"></span>
-                            <span class="label">Montrer le mot de passe</span>
+                            <input class="character-checkbox" type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                            <label class="label" for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
                         </div>
-                        <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log in">
+                        <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+                        {% if csrf_token %}
+                            <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                        {% endif %}
                     </form>
                     <a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Mot de passe oublié ?</a>
                     <hr>

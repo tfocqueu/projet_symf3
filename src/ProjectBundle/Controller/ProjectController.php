@@ -9,7 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class ProjectController extends Controller
 {
     /**
-     * @Route("/accueil")
+     * @Route("/")
      */
 
     public function indexAction()
