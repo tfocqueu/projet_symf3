@@ -56,6 +56,11 @@ class Entreprise
      */
     private $telephone;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="ProjectBundle\Entity\Utilisateur",cascade={"persist"})
+     */
+    private $users;
+
 
     /**
      * Get id
@@ -186,5 +191,33 @@ class Entreprise
     {
         return $this->telephone;
     }
-}
 
+    public function __toString()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * Set users
+     *
+     * @param \ProjectBundle\Entity\Utilisateur $users
+     *
+     * @return Entreprise
+     */
+    public function setUsers(\ProjectBundle\Entity\Utilisateur $users = null)
+    {
+        $this->users = $users;
+
+        return $this;
+    }
+
+    /**
+     * Get users
+     *
+     * @return \ProjectBundle\Entity\Utilisateur
+     */
+    public function getUsers()
+    {
+        return $this->users;
+    }
+}
