@@ -93,5 +93,9 @@ class Visite
     {
         return $this->observation;
     }
-}
 
+    public function __toString()
+    {
+        return $this->observation;
+    }
+}

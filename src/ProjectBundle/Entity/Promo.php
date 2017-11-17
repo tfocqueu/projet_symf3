@@ -62,5 +62,9 @@ class Promo
     {
         return $this->annee;
     }
-}
 
+    public function __toString()
+    {
+        return $this->annee;
+    }
+}
