@@ -16,4 +16,12 @@ class ProjectController extends Controller
     {
         return $this->render('ProjectBundle:ProjectFront:accueil.html.twig');
     }
+
+    /**
+     * @Route("/stage",name="searchstage")
+     */
+    public function searchStageAction()
+    {
+        return $this->render('ProjectBundle:ProjectFront:searchstage.html.twig');
+    }
 }
