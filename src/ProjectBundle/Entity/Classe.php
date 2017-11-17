@@ -97,5 +97,50 @@ class Classe
     {
         return $this->designation;
     }
-}
 
+    public function __toString()
+    {
+        return $this->libelle;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->laPromo = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add laPromo
+     *
+     * @param \ProjectBundle\Entity\Promo $laPromo
+     *
+     * @return Classe
+     */
+    public function addLaPromo(\ProjectBundle\Entity\Promo $laPromo)
+    {
+        $this->laPromo[] = $laPromo;
+
+        return $this;
+    }
+
+    /**
+     * Remove laPromo
+     *
+     * @param \ProjectBundle\Entity\Promo $laPromo
+     */
+    public function removeLaPromo(\ProjectBundle\Entity\Promo $laPromo)
+    {
+        $this->laPromo->removeElement($laPromo);
+    }
+
+    /**
+     * Get laPromo
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getLaPromo()
+    {
+        return $this->laPromo;
+    }
+}

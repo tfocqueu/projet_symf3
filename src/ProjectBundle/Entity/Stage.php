@@ -42,6 +42,15 @@ class Stage
      */
     private $datefin;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="ProjectBundle\Entity\Visite",cascade={"persist"})
+     */
+    private $visits;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="ProjectBundle\Entity\Technologie",cascade={"persist"})
+     */
+    private $technos;
 
     /**
      * Get id
@@ -124,5 +133,69 @@ class Stage
     {
         return $this->datefin;
     }
-}
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->technos = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
+    /**
+     * Set visits
+     *
+     * @param \ProjectBundle\Entity\Visite $visits
+     *
+     * @return Stage
+     */
+    public function setVisits(\ProjectBundle\Entity\Visite $visits = null)
+    {
+        $this->visits = $visits;
+
+        return $this;
+    }
+
+    /**
+     * Get visits
+     *
+     * @return \ProjectBundle\Entity\Visite
+     */
+    public function getVisits()
+    {
+        return $this->visits;
+    }
+
+    /**
+     * Add techno
+     *
+     * @param \ProjectBundle\Entity\Technologie $techno
+     *
+     * @return Stage
+     */
+    public function addTechno(\ProjectBundle\Entity\Technologie $techno)
+    {
+        $this->technos[] = $techno;
+
+        return $this;
+    }
+
+    /**
+     * Remove techno
+     *
+     * @param \ProjectBundle\Entity\Technologie $techno
+     */
+    public function removeTechno(\ProjectBundle\Entity\Technologie $techno)
+    {
+        $this->technos->removeElement($techno);
+    }
+
+    /**
+     * Get technos
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTechnos()
+    {
+        return $this->technos;
+    }
+}
