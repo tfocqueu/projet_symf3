@@ -2,41 +2,66 @@
 
 namespace ProjectBundle\Event;
 
-use Symfony\Component\Cache\Adapter\RedisAdapter;
+use Doctrine\Common\Persistence\ObjectManager;
+use ProjectBundle\Entity\ControleForceBrute;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\HttpKernel\Event\GetResponseEvent;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpKernel\KernelEvents;
+use Symfony\Component\Routing\Matcher\RequestMatcherInterface;
 use Symfony\Component\Security\Core\AuthenticationEvents;
 use Symfony\Component\Security\Core\Event\AuthenticationFailureEvent;
 
-class Fail implements EventSubscriberInterface
+class fail implements EventSubscriberInterface
 {
-    private $redisAdapter;
+    const MAX_LOGIN_FAILURE_ATTEMPTS = 5;
+    private $request;
+    private $requestStack;
+    private $router;
+    private $em;
 
-    public function __construct(RedisAdapter $redisAdapter)
+    public function __construct( RequestStack $requestStack, ObjectManager $em)
     {
-        $this->redisAdapter = $redisAdapter;
+        $this->requestStack = $requestStack;
+        $this->em = $em;
+
     }
 
     public static function getSubscribedEvents()
     {
         return [
             AuthenticationEvents::AUTHENTICATION_FAILURE => 'onAuthenticationFailure',
+            KernelEvents::REQUEST => ['beforeFirewall', 10]
         ];
     }
 
     public function onAuthenticationFailure(AuthenticationFailureEvent $event)
     {
         $username = $event->getAuthenticationToken()->getUsername();
-        $fail2ban = $this->redisAdapter->getItem($this->request->getClientIp());
-        $list = ($fail2ban->isHit()) ? $fail2ban->get() : [];
-        if (!isset($list[$username])) {
-            $list[$username] = 1;
-        } else {
-            $list[$username]++;
+        $ip = $this->requestStack->getCurrentRequest()->getClientIp();
+        $date = new \DateTime();
+        $dateBefore = new \DateTime();
+        $dateBefore->modify('-1 hour');
+
+        $FailureAuth = $this->em->getRepository(ControleForceBrute::class)->compteIp($ip, $date, $dateBefore);
+
+        $nbFailure = count($FailureAuth);
+
+        dump($nbFailure);
+
+        if($nbFailure < 3)
+        {
+            $controleForceBrute = new ControleForceBrute();
+            $controleForceBrute->setIp($ip);
+            $controleForceBrute->setDate($date);
+            $this->em->persist($controleForceBrute);
+            $this->em->flush();
         }
+    }
 
-        $fail2ban->set($list);
-
-        $fail2ban->expiresAt(new \DateTime('+ 1 hour'));
-        $this->redisAdapter->save($fail2ban);
+    public function beforeFirewall(GetResponseEvent $event)
+    {
     }
 }

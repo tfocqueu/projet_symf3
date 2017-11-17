@@ -35,8 +35,9 @@ services:
     #         $someArgument: 'some_value
 
     event.brute.force:
-        class: ProjectBundle\Event\Fail
+        class: ProjectBundle\Event\fail
         arguments:
-            - "@cache.app"
+          - '@request_stack'
+          - '@doctrine.orm.entity_manager'
         tags:
             - { name: kernel.event_subscriber }
