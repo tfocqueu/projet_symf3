@@ -3,6 +3,8 @@
 namespace ProjectBundle\Entity;
 
 use Doctrine\ORM\Query\Expr\Base;
+use Doctrine\ORM\Mapping\AttributeOverrides;
+use Doctrine\ORM\Mapping\AttributeOverride;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -11,6 +13,50 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="utilisateur")
  * @ORM\Entity(repositoryClass="ProjectBundle\Repository\UtilisateurRepository")
+ *
+ *
+ *  @AttributeOverrides({
+ *     @AttributeOverride(name="emailCanonical",
+ *         column=@ORM\Column(
+ *             name="emailCanonical",
+ *             type="string",
+ *             length=255,
+ *             nullable=true
+ *         )
+ *     ),
+ *     @AttributeOverride(name="usernameCanonical",
+ *         column=@ORM\Column(
+ *             name="usernameCanonical",
+ *             type="string",
+ *             length=255,
+ *             nullable=true
+ *         )
+ *     ),
+ *     @AttributeOverride(name="password",
+ *         column=@ORM\Column(
+ *             name="password",
+ *             type="string",
+ *             length=255,
+ *             nullable=true
+ *         )
+ *     ),
+ *     @AttributeOverride(name="adresse",
+ *         column=@ORM\Column(
+ *             name="adresse",
+ *             type="string",
+ *             length=255,
+ *             nullable=true
+ *         )
+ *     ),
+ *     @AttributeOverride(name="anneeobtention",
+ *         column=@ORM\Column(
+ *             name="anneeobtention",
+ *             type="integer",
+ *             nullable=true
+ *         )
+ *     ),
+ * })
+
  */
 class Utilisateur extends BaseUser
 {
@@ -43,8 +89,6 @@ class Utilisateur extends BaseUser
      * @ORM\Column(name="adresse", type="string", length=255)
      */
     private $adresse;
-
-
 
     /**
      * @ORM\ManyToMany(targetEntity="ProjectBundle\Entity\Diplome",cascade={"persist"})
