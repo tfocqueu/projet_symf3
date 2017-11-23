@@ -39,29 +39,37 @@ class fail implements EventSubscriberInterface
 
     public function onAuthenticationFailure(AuthenticationFailureEvent $event)
     {
-        $username = $event->getAuthenticationToken()->getUsername();
+        $ip = $this->requestStack->getCurrentRequest()->getClientIp();
+        $date = new \DateTime();
+        $controleForceBrute = new ControleForceBrute();
+        $controleForceBrute->setIp($ip);
+        $controleForceBrute->setDate($date);
+        $this->em->persist($controleForceBrute);
+        $this->em->flush();
+    }
+
+    public function beforeFirewall(GetResponseEvent $event)
+    {
         $ip = $this->requestStack->getCurrentRequest()->getClientIp();
         $date = new \DateTime();
         $dateBefore = new \DateTime();
         $dateBefore->modify('-1 hour');
 
         $FailureAuth = $this->em->getRepository(ControleForceBrute::class)->compteIp($ip, $date, $dateBefore);
-
         $nbFailure = count($FailureAuth);
 
-        dump($nbFailure);
+        $dateBan = $this->em->getRepository(ControleForceBrute::class)->getDate($ip);
 
-        if($nbFailure < 3)
-        {
-            $controleForceBrute = new ControleForceBrute();
-            $controleForceBrute->setIp($ip);
-            $controleForceBrute->setDate($date);
-            $this->em->persist($controleForceBrute);
-            $this->em->flush();
+        var_dump($date);
+        var_dump($dateBan);
+
+
+        if ($nbFailure >= 3 && ($date >= $dateBan) ){
+            throw new HttpException(
+                429,
+                'Votre Ip est ban pendant 12 heures.'
+            );
         }
-    }
 
-    public function beforeFirewall(GetResponseEvent $event)
-    {
     }
 }
