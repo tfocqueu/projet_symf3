@@ -51,15 +51,17 @@ class fail implements EventSubscriberInterface
     public function beforeFirewall(GetResponseEvent $event)
     {
         $ip = $this->requestStack->getCurrentRequest()->getClientIp();
-        $date = new \DateTime();
         $dateBefore = new \DateTime();
         $dateBefore->modify('-1 hour');
 
-        $FailureAuth = $this->em->getRepository(ControleForceBrute::class)->compteIp($ip, $date, $dateBefore);
+        $FailureAuth = $this->em->getRepository(ControleForceBrute::class)->compteIp($ip, $dateBefore);
         $nbFailure = count($FailureAuth);
 
         $dateBan = $this->em->getRepository(ControleForceBrute::class)->getDate($ip);
 
+        $date = new \DateTime($dateBan);
+        $date->modify('+12 hour');
+        
         if ($nbFailure >= 3 && ($date >= $dateBan) ){
             throw new HttpException(
                 429,

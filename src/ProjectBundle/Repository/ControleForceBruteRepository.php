@@ -12,14 +12,13 @@ use Doctrine\ORM\Query;
  */
 class ControleForceBruteRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function compteIp($ip, $date, $dateBefore)
+    public function compteIp($ip, $dateBefore)
     {
         $qb = $this->createQueryBuilder('C')
             ->where ('C.ip = :ip')
-            ->andWhere('C.date BETWEEN :date2 and :date1')
+            ->andWhere('C.date > :date')
             ->setParameter('ip', $ip)
-            ->setParameter('date1', $date)
-            ->setParameter('date2', $dateBefore)
+            ->setParameter('date', $dateBefore)
             ->getQuery()->getResult();
 
         return $qb;
@@ -29,7 +28,7 @@ class ControleForceBruteRepository extends \Doctrine\ORM\EntityRepository
             ->select('MAX(C.date)')
             ->where ('C.ip = :ip')
             ->setParameter('ip', $ip)
-            ->getQuery()->getResult();
+            ->getQuery()->getSingleScalarResult();
 
         return $qb;
     }
