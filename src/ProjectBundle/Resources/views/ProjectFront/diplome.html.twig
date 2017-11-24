@@ -1,0 +1,34 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <h1> Suivi des Diplomes </h1>
+    <div class="gch">
+            <h2>Listes des diplomes</h2>
+            <table>
+                <thead>
+                <th>Intitulé</th>
+                <th>Actions</th>
+                </thead>
+                <tbody>
+                {% for diplome in lesDiplomes %}
+                <tr>
+                    <td>
+                        {{ diplome.libelle }}
+                    </td>
+                    <td>
+                        <a href="{{ path('diplome_delete',{'id' : diplome.id}) }}">Supprimer le diplome</a>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+    </div>
+    <div class="drt">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button type="submit" class="btn btn-success">Ajout du diplome</button>
+        {{ form_end(form) }}
+    </div>
+    <div class="clr"></div>
+{% endblock %}

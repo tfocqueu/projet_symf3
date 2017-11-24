@@ -34,9 +34,3 @@ services:
     #     arguments:
     #         $someArgument: 'some_value
 
-    event.brute.force:
-        class: ProjectBundle\Event\Fail
-        arguments:
-            - "@cache.app"
-        tags:
-            - { name: kernel.event_subscriber }
