@@ -34,3 +34,10 @@ services:
     #     arguments:
     #         $someArgument: 'some_value
 
+    event.brute.force:
+        class: ProjectBundle\Event\fail
+        arguments:
+          - '@request_stack'
+          - '@doctrine.orm.entity_manager'
+        tags:
+            - { name: kernel.event_subscriber }
