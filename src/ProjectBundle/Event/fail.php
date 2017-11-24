@@ -60,10 +60,6 @@ class fail implements EventSubscriberInterface
 
         $dateBan = $this->em->getRepository(ControleForceBrute::class)->getDate($ip);
 
-        var_dump($date);
-        var_dump($dateBan);
-
-
         if ($nbFailure >= 3 && ($date >= $dateBan) ){
             throw new HttpException(
                 429,
