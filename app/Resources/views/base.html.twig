@@ -23,7 +23,7 @@
         </div>
         <div class="btn connexion">
             {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                <p> Bonjour {{ user.username }}</p>
+                <p> Bonjour {{ app.user.username }}</p>
                 <a href="{{path('fos_user_security_logout')}}"> <button type="button" class="btn btn-default"> Déconnexion </button> </a>
             {% else %}
                 <a href="{{path('fos_user_security_login')}}"> <button type="button" class="btn btn-default"> Connexion </button> </a>

@@ -3,6 +3,7 @@
 namespace ProjectBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Entreprise
@@ -32,6 +33,8 @@ class Entreprise
      * @var int
      *
      * @ORM\Column(name="chiffreaffaires", type="float")
+     *
+     * @Assert\Type("float")
      */
     private $chiffreaffaires;
 

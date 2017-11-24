@@ -1,26 +1,36 @@
 {% extends '::base.html.twig' %}
 
 {% block body  %}
-    <div class="left">
-        <div class="btn-group-vertical" role="group">
-            <button type="button" class="btn btn-danger">top</button>
-            <button type="button" class="btn btn-danger">Mid</button>
-            <button type="button" class="btn btn-danger">bot</button>
-        </div>
-    </div>
-    <div class="mid">
-        <h2>Gestion des entreprises</h2>
-        <h3>rechercher un élèves</h3>
 
-        <p>Classe : </p>
-        <select name="classe" id="class">
-            {# for class in classes #}
-            {# endfor #}
-        </select>
-        <p>Eleve</p>
-        <select name="students" id="student">
-            {# for student in users #}
-            {# endfor #}
-        </select>
+    <div class="col-md-6">
+        <h2>Listes des entreprises</h2>
+        <table>
+            <thead>
+            <th>Intitulé</th>
+            <th>Actions</th>
+            </thead>
+            <tbody>
+            {% for entreprise in lesEntreprises %}
+                <tr>
+                    <td>
+                        {{ entreprise.nom }}
+                    </td>
+                    <td>
+                        <a href="{{ path('entreprise_delete',{'id' : entreprise.id}) }}">Supprimer l'entreprise</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-6">
+        <h2>Ajouter une entreprise</h2>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <br>
+        <button type="submit" class="btn btn-success">Ajout d'une entreprise</button>
+
+        {{ form_end(form) }}
     </div>
 {% endblock %}

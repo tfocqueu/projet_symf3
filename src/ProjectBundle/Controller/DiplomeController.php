@@ -24,8 +24,6 @@ class DiplomeController extends Controller
 
         $listDiplome = $repository->findAll();
 
-
-
         $diplome  = new Diplome();
 
         $form = $this->createForm(DiplomeType::class, $diplome);
