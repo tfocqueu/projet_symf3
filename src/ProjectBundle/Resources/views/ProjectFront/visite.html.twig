@@ -1,0 +1,47 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <h1> Suivi des Visite </h1>
+    <div class="gch">
+        <h2>Listes des Visite</h2>
+        <table>
+            <thead>
+            <th>Date</th>
+            <th>observation</th>
+            <th>Action</th>
+            </thead>
+            <tbody>
+            {% for visite in lesVisits %}
+                <tr>
+                    <td>
+                        {{ visite.date|date('d/m/Y') }}
+                    </td>
+                    <td>
+                        {{ visite.observation }}
+                    </td>
+                    <td>
+                        <a href="{{ path('visite_delete',{'id' : visite.id}) }}">Supprimer le diplome</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+    <div class="drt">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button type="submit" class="btn btn-success">Ajout de la visite</button>
+        {{ form_end(form) }}
+    </div>
+    <div class="clr"></div>
+
+    <script>
+        $(document).ready(function() {
+            // configure the bootstrap datepicker
+            $('.js-datepicker').datepicker({
+                format: 'dd-mm-yyyy'
+            });
+        });
+    </script>
+{% endblock %}
