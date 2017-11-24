@@ -61,7 +61,6 @@ class fail implements EventSubscriberInterface
 
         $date = new \DateTime($dateBan);
         $date->modify('+12 hour');
-
         if ($nbFailure >= 3 && ($date >= $dateBan) ){
             throw new HttpException(
                 429,
