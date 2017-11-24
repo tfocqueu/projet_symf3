@@ -46,20 +46,15 @@ class TechnologieController extends Controller
         return $this->render('@Project/ProjectFront/technologie.html.twig',array('lesTechnologies'=>$listTechno,'form'=>$formview));
     }
 
-
-
-
     /**
-     * @Route("/technologie/{id}", name="techno_delete")
+     * @Route("/technologie/{technologie}", name="techno_delete")
      */
     public function deleteAction(Technologie $technologie)
     {
         $em = $this->getDoctrine()->getManager();
 
-
         $em->remove($technologie);
         $em->flush();
-
         return $this->redirectToRoute('techno_show');
     }
 }

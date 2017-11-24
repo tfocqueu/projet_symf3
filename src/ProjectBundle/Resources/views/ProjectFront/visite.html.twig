@@ -1,9 +1,9 @@
 {% extends "::base.html.twig" %}
 
 {% block body %}
-    <h1> Suivi des Visite </h1>
-    <div class="gch">
-        <h2>Listes des Visite</h2>
+    <h1> Suivi des Visites </h1>
+    <div class="col-md-6">
+        <h2>Liste des Visites</h2>
         <table>
             <thead>
             <th>Date</th>
@@ -20,7 +20,7 @@
                         {{ visite.observation }}
                     </td>
                     <td>
-                        <a href="{{ path('visite_delete',{'id' : visite.id}) }}">Supprimer le diplome</a>
+                        <a href="{{ path('visite_delete',{'visite' : visite.id}) }}">Supprimer la visite </a>
                     </td>
                 </tr>
             {% endfor %}
@@ -28,13 +28,14 @@
         </table>
 
     </div>
-    <div class="drt">
+    <div class="col-md-6">
+        <h2>Ajout d'une Visite</h2>
         {{ form_start(form) }}
         {{ form_widget(form) }}
+        <br/>
         <button type="submit" class="btn btn-success">Ajout de la visite</button>
         {{ form_end(form) }}
     </div>
-    <div class="clr"></div>
 
     <script>
         $(document).ready(function() {

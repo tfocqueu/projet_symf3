@@ -46,22 +46,16 @@ class VisiteController extends Controller
     }
 
 
-
-
     /**
-     * @Route("/visite/{id}", name="visite_delete")
+     * @Route("/visite/{visite}", name="visite_delete")
      */
-    public function deleteAction($id)
+    public function deleteAction(Visite $visite)
     {
         $em = $this->getDoctrine()->getManager();
-
-        $diplomerepository = $this->getDoctrine()->getManager()->getRepository('ProjectBundle:Diplome');
-        $leDiplome = $diplomerepository->find($id);
-
-        $em->remove($leDiplome);
+        $em->remove($visite);
         $em->flush();
 
-        return $this->redirectToRoute('diplome_show');
+        return $this->redirectToRoute('visite_show');
     }
 
 }

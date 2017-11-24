@@ -2,7 +2,7 @@
 
 {% block body %}
     <h1> Suivi des Technologies </h1>
-    <div class="gch">
+    <div class="col-md-6">
         <h2>Listes des technologies</h2>
         <table>
             <thead>
@@ -16,7 +16,7 @@
                         {{ technos.libelleTechnologie }}
                     </td>
                     <td>
-                        <a href="{{ path('techno_delete',{'id' : technos.id}) }}">Supprimer la technologie</a>
+                        <a href="{{ path('techno_delete',{'technologie' : technos.id}) }}">Supprimer la technologie</a>
                     </td>
                 </tr>
             {% endfor %}
@@ -24,11 +24,12 @@
         </table>
 
     </div>
-    <div class="drt">
+    <div class="col-md-6">
+        <h2>Ajouter une technologie</h2>
         {{ form_start(form) }}
         {{ form_widget(form) }}
+        <br/>
         <button type="submit" class="btn btn-success">Ajout de la technologie</button>
         {{ form_end(form) }}
     </div>
-    <div class="clr"></div>
 {% endblock %}
