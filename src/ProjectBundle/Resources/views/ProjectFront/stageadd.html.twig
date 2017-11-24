@@ -6,4 +6,11 @@
     {{ form_widget(form) }}
     <button type="submit" class="btn btn-success">Ajout de la visite</button>
     {{ form_end(form)}}
+    <script>
+        $(document).ready(function() {
+            $('.js-datepicker').datepicker({
+                format: 'dd-mm-yyyy'
+            });
+        });
+    </script>
 {% endblock %}

@@ -2,8 +2,10 @@
 
 namespace ProjectBundle\Form;
 
+use ProjectBundle\Entity\Technologie;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -17,26 +19,32 @@ class StageType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('annee',DateType::class,array(
-                        'widget' =>'single_text'
-        ))
+                        'widget' => 'single_text',
+                        'attr'   => [
+                            'class'    => 'form-control',
+                            'required' => true,
+                        ]
+                ))
                             ->add('datedebut',DateType::class,array(
-                                'html5'=>false,
-                                'attr'=>['class'=>'form-group'],
-                                'widget' =>'single_text'
+                                'widget' =>'single_text',
+                                'attr' => [
+                                    'class'=> 'form-control',
+                                    'required'=>true,
+                                ]
                 ))
                 ->add('datefin',DateType::class,array(
-                    'html5'=>false,
-                    'attr'=>['class'=>'form-group'],
-                    'widget' =>'single_text'
+                    'widget' => 'single_text',
+                    'attr' => [
+                        'class'=> 'form-control',
+                        'required'=>true,
+                    ]
                 ))
                 ->add('visits',EntityType::class,array(
                     'class' => 'ProjectBundle\Entity\Visite'
                 ))
-                ->add('technos',EntityType::class,array(
-                    'class' => 'ProjectBundle\Entity\Technologie',
-                    'choice_label' => 'libelleTechnologie',
-                    'expanded' => false,
-                    'multiple' => false
+                ->add('technos',CollectionType::class,array(
+                    'entry_type' => Technologie::class,
+                    'entry_options' => array('label' => false),
                 ));
     }
     
