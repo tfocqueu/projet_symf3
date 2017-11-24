@@ -2,6 +2,8 @@
 
 namespace ProjectBundle\Repository;
 
+use Doctrine\ORM\Query;
+
 /**
  * ControleForceBruteRepository
  *
@@ -19,5 +21,16 @@ class ControleForceBruteRepository extends \Doctrine\ORM\EntityRepository
             ->setParameter('date1', $date)
             ->setParameter('date2', $dateBefore)
             ->getQuery()->getResult();
+
+        return $qb;
+    }
+    public function getDate($ip){
+        $qb = $this->createQueryBuilder('C')
+            ->select('MAX(C.date)')
+            ->where ('C.ip = :ip')
+            ->setParameter('ip', $ip)
+            ->getQuery()->getResult();
+
+        return $qb;
     }
 }
