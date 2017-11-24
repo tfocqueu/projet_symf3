@@ -42,17 +42,25 @@ class EntrepriseController extends Controller
         return $this->render('@Project/ProjectFront/searchentreprise.html.twig',array('lesEntreprises'=>$listEntreprise,'form'=>$formview));
     }
 
+    /**
+     * @route("/show_entreprise", name="entreprise_show_id")
+     *
+     */
+    public function showEntrepriseAction(Request $request){
+
+        $entrepriseId = $request->request->get('entreprise');
+        $repository = $this->getDoctrine()->getManager()->getRepository('ProjectBundle:Entreprise');
+        $entreprise = $repository->find($entrepriseId);
+
+        return $this->render('@Project/ProjectFront/showentreprise.html.twig', array('entreprise'=> $entreprise ));
+    }
 
     /**
-     * @Route("/entreprise/{id}", name="entreprise_delete")
+     * @Route("/entreprise/{entreprise}", name="entreprise_delete")
      */
-    public function deleteAction($id)
+    public function deleteAction(Entreprise $entreprise)
     {
         $em = $this->getDoctrine()->getManager();
-
-        $entrepriserepository = $this->getDoctrine()->getManager()->getRepository('ProjectBundle:Entreprise');
-        $entreprise = $entrepriserepository->find($id);
-
         $em->remove($entreprise);
         $em->flush();
 

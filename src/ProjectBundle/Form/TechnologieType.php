@@ -5,6 +5,7 @@ namespace ProjectBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class TechnologieType extends AbstractType
 {
@@ -13,7 +14,17 @@ class TechnologieType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('libelleTechnologie');
+        $builder->add('libelleTechnologie' ,TextType::class, [
+
+            'label'       => 'Libelle',
+
+            'attr'        => [
+
+                'class'    => 'form-control',
+
+                'required' => true,
+
+            ],]);
     }
     
     /**

@@ -15,14 +15,27 @@ class VisiteType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('date',DateType::class, array(
-            // do not render as type="date", to avoid HTML5 date pickers
-            'html5' => false,
+        $builder->add('date',DateType::class, [
 
-            // add a class that can be selected in JavaScript
-            'attr' => ['class' => 'js-datepicker'],
-        ))
-                ->add('observation',TextareaType::class);
+            'widget' => 'single_text',
+
+            'attr'   => [
+
+            'class'    => 'form-control',
+
+            'required' => true,
+
+            ],])->add('observation',TextareaType::class, [
+
+                'label'       => 'Observation',
+
+                'attr'        => [
+
+                'class'    => 'form-control',
+
+                'required' => true,
+
+            ],]);
     }
     
     /**

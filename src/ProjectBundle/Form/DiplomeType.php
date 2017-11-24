@@ -14,7 +14,17 @@ class DiplomeType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('libelle',TextType::class);
+        $builder->add('libelle',TextType::class, [
+
+            'label'       => 'Libelle',
+
+            'attr'        => [
+
+                'class'    => 'form-control',
+
+                'required' => true,
+
+            ],]);
     }
     
     /**

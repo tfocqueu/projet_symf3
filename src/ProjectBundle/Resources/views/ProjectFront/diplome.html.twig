@@ -2,7 +2,7 @@
 
 {% block body %}
     <h1> Suivi des Diplomes </h1>
-    <div class="gch">
+    <div class="col-md-6">
             <h2>Listes des diplomes</h2>
             <table>
                 <thead>
@@ -16,16 +16,18 @@
                         {{ diplome.libelle }}
                     </td>
                     <td>
-                        <a href="{{ path('diplome_delete',{'id' : diplome.id}) }}">Supprimer le diplome</a>
+                        <a href="{{ path('diplome_delete',{'diplome' : diplome.id}) }}">Supprimer le diplome</a>
                     </td>
                 </tr>
                 {% endfor %}
                 </tbody>
             </table>
     </div>
-    <div class="drt">
+    <div class="col-md-6">
+        <h2>Ajouter un diplome</h2>
         {{ form_start(form) }}
         {{ form_widget(form) }}
+        <br/>
         <button type="submit" class="btn btn-success">Ajout du diplome</button>
         {{ form_end(form) }}
     </div>

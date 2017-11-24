@@ -48,16 +48,12 @@ class DiplomeController extends Controller
 
 
     /**
-     * @Route("/diplome/{id}", name="diplome_delete")
+     * @Route("/diplome/{diplome}", name="diplome_delete")
      */
-    public function deleteAction($id)
+    public function deleteAction(Diplome $diplome)
     {
         $em = $this->getDoctrine()->getManager();
-
-        $diplomerepository = $this->getDoctrine()->getManager()->getRepository('ProjectBundle:Diplome');
-        $leDiplome = $diplomerepository->find($id);
-
-        $em->remove($leDiplome);
+        $em->remove($diplome);
         $em->flush();
 
         return $this->redirectToRoute('diplome_show');

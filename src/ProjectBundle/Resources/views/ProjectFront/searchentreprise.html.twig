@@ -3,25 +3,22 @@
 {% block body  %}
 
     <div class="col-md-6">
-        <h2>Listes des entreprises</h2>
-        <table>
-            <thead>
-            <th>Intitulé</th>
-            <th>Actions</th>
-            </thead>
-            <tbody>
+        <h2>Rechercher une entreprise</h2>
+
+        <h4> Nom de l'entreprise </h4>
+
+        <form action="{{ path('entreprise_show_id') }}" method="post">
+
+        <select name="entreprise" class="form-control">
             {% for entreprise in lesEntreprises %}
-                <tr>
-                    <td>
-                        {{ entreprise.nom }}
-                    </td>
-                    <td>
-                        <a href="{{ path('entreprise_delete',{'id' : entreprise.id}) }}">Supprimer l'entreprise</a>
-                    </td>
-                </tr>
+
+                <option value={{ entreprise.id }}>{{ entreprise.nom }}</option>
+
             {% endfor %}
-            </tbody>
-        </table>
+                </select>
+        <br/>
+         <button type="submit" class="btn btn-success">Rechercher </button>
+        </form>
     </div>
 
     <div class="col-md-6">
