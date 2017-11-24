@@ -26,10 +26,10 @@ class ControleForceBruteRepository extends \Doctrine\ORM\EntityRepository
     }
     public function getDate($ip){
         $qb = $this->createQueryBuilder('C')
+            ->select('MAX(C.date)')
             ->where ('C.ip = :ip')
-            ->orderBy('C.date', 'DESC')
             ->setParameter('ip', $ip)
-            ->getQuery()->get();
+            ->getQuery()->getResult();
 
         return $qb;
     }
