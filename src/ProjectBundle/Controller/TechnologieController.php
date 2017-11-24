@@ -52,14 +52,12 @@ class TechnologieController extends Controller
     /**
      * @Route("/technologie/{id}", name="techno_delete")
      */
-    public function deleteAction($id)
+    public function deleteAction(Technologie $technologie)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $technorepository = $this->getDoctrine()->getManager()->getRepository('ProjectBundle:Technologie');
-        $laTechno = $technorepository->find($id);
 
-        $em->remove($laTechno);
+        $em->remove($technologie);
         $em->flush();
 
         return $this->redirectToRoute('techno_show');
