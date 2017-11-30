@@ -52,6 +52,7 @@ class TechnologieController extends Controller
     public function deleteAction(Technologie $technologie)
     {
         $em = $this->getDoctrine()->getManager();
+
         $em->remove($technologie);
         $em->flush();
         return $this->redirectToRoute('techno_show');

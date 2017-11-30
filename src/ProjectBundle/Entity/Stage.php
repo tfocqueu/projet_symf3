@@ -22,6 +22,13 @@ class Stage
     private $id;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="Libelle_stage",type="string")
+     */
+    private $libelleStage;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="annee", type="datetimetz")
@@ -43,6 +50,13 @@ class Stage
     private $datefin;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="observation",type="string",length=500)
+     */
+    private $observation;
+
+    /**
      * @ORM\ManyToOne(targetEntity="ProjectBundle\Entity\Visite",cascade={"persist"})
      */
     private $visits;
@@ -51,6 +65,11 @@ class Stage
      * @ORM\ManyToMany(targetEntity="ProjectBundle\Entity\Technologie",cascade={"persist"})
      */
     private $technos;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="ProjectBundle\Entity\Entreprise",cascade={"persist"})
+     */
+    private $enteprises;
 
     /**
      * Get id
@@ -197,5 +216,82 @@ class Stage
     public function getTechnos()
     {
         return $this->technos;
+    }
+
+    /**
+     * Set observation
+     *
+     * @param string $observation
+     *
+     * @return Stage
+     */
+    public function setObservation($observation)
+    {
+        $this->observation = $observation;
+
+        return $this;
+    }
+
+    /**
+     * Get observation
+     *
+     * @return string
+     */
+    public function getObservation()
+    {
+        return $this->observation;
+    }
+
+    /**
+     * Set enteprises
+     *
+     * @param \ProjectBundle\Entity\Entreprise $enteprises
+     *
+     * @return Stage
+     */
+    public function setEnteprises(\ProjectBundle\Entity\Entreprise $enteprises = null)
+    {
+        $this->enteprises = $enteprises;
+
+        return $this;
+    }
+
+    /**
+     * Get enteprises
+     *
+     * @return \ProjectBundle\Entity\Entreprise
+     */
+    public function getEnteprises()
+    {
+        return $this->enteprises;
+    }
+
+    /**
+     * Set libelleStage
+     *
+     * @param string $libelleStage
+     *
+     * @return Stage
+     */
+    public function setLibelleStage($libelleStage)
+    {
+        $this->libelleStage = $libelleStage;
+
+        return $this;
+    }
+
+    /**
+     * Get libelleStage
+     *
+     * @return string
+     */
+    public function getLibelleStage()
+    {
+        return $this->libelleStage;
+    }
+
+    public function __toString()
+    {
+        return $this->libelleStage;
     }
 }
