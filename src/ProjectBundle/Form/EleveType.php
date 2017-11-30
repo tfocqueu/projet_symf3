@@ -98,17 +98,6 @@ class EleveType extends AbstractType
                 'required' => true,
 
             ],
-        ))->add('stages',EntityType::class,array(
-
-            'class' => 'ProjectBundle\Entity\Stage',
-
-            'attr'        => [
-
-                'class'    => 'form-control',
-
-                'required' => true,
-
-            ],
         ));
 
     }

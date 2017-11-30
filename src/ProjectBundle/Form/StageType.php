@@ -144,28 +144,7 @@ class StageType extends AbstractType
 
                 ],
 
-            ))->add('utilisateur' ,EntityType::class, [
-
-                'class'       => 'ProjectBundle\Entity\Utilisateur',
-
-                'label'       => 'Eleve',
-
-                'query_builder' => function (UtilisateurRepository $repository){
-
-                    $roles='ROLE_ELEVE';
-
-                    return $repository->createQueryBuilder('u')
-                        ->where('u.roles LIKE :roles')
-                        ->setParameter('roles', '%"'.$roles.'"%');
-                },
-
-                'attr'        => [
-
-                    'class'    => 'form-control',
-
-                    'required' => true,
-
-                ],]);
+            ));
 
     }
 

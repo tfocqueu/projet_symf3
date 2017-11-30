@@ -24,6 +24,12 @@
 
     <div class="col-md-12">
         <br> <br>
+        <select name="stageselect" id="stageselect">
+            {% for stage in lesStages %}
+                <option value="{{ stage.id }}">{{ stage.libelleStage }}</option>
+            {% endfor %}
+        </select>
+        <a href="{{ path('add_stage_eleve',{'eleve' : eleve.id}) }}"><button type="submit" class="btn btn-info">Ajouter un stage pour {{ eleve.prenom }} {{ eleve.nom }} </button></a>
     <table>
             <thead>
             <th>Nom stage</th>

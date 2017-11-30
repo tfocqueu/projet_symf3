@@ -3,6 +3,7 @@
 namespace ProjectBundle\Controller;
 
 use Monolog\Handler\Curl\Util;
+use ProjectBundle\Entity\Stage;
 use ProjectBundle\Entity\Utilisateur;
 use ProjectBundle\Form\EleveType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -83,5 +84,19 @@ class EleveController extends Controller
         $em->flush();
 
         return $this->redirectToRoute('eleve_show');
+    }
+
+    /**
+     * @Route(name="add_stage_eleve")
+     */
+    public function addStageEleveAction(Utilisateur $eleve, Stage $stage)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $eleve->setStages($stage);
+        $em->persist($eleve);
+        $em->flush();
+
+        return  $this->redirectToRoute('eleve_show_id');
     }
 }
