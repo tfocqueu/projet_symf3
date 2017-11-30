@@ -17,7 +17,7 @@ class VisiteType extends AbstractType
     {
         $builder->add('date',DateType::class, [
 
-            'widget' => 'single_text',
+            'widget' => 'choice',
 
             'attr'   => [
 

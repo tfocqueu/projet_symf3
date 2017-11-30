@@ -43,16 +43,24 @@ class EntrepriseController extends Controller
     }
 
     /**
-     * @route("/show_entreprise", name="entreprise_show_id")
+     * @route("/show_entreprise/{entreprise}", name="entreprise_show_id")
      *
      */
-    public function showEntrepriseAction(Request $request){
+    public function showEntrepriseAction(Request $request, Entreprise $entreprise){
 
-        $entrepriseId = $request->request->get('entreprise');
-        $repository = $this->getDoctrine()->getManager()->getRepository('ProjectBundle:Entreprise');
-        $entreprise = $repository->find($entrepriseId);
+        $form = $this->createForm(EntrepriseType::class, $entreprise);
+        $form->handleRequest($request);
+        if($form->isSubmitted())
+        {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($entreprise);
+            $em->flush();
+            return $this->redirectToRoute('entreprise_show');
+        }
 
-        return $this->render('@Project/ProjectFront/showentreprise.html.twig', array('entreprise'=> $entreprise ));
+        $formview = $form->createView();
+
+        return $this->render('@Project/ProjectFront/showentreprise.html.twig', array('entreprise'=> $entreprise,'form'=>$formview));
     }
 
     /**

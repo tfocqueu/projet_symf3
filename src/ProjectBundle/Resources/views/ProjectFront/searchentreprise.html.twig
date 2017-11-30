@@ -7,18 +7,12 @@
 
         <h4> Nom de l'entreprise </h4>
 
-        <form action="{{ path('entreprise_show_id') }}" method="post">
 
-        <select name="entreprise" class="form-control">
             {% for entreprise in lesEntreprises %}
 
-                <option value={{ entreprise.id }}>{{ entreprise.nom }}</option>
+                <a href={{ path('entreprise_show', ['entreprise' => {{ entreprise.id }}]) }}>{{ entreprise.nom }}</a>
 
             {% endfor %}
-                </select>
-        <br/>
-         <button type="submit" class="btn btn-success">Rechercher </button>
-        </form>
     </div>
 
     <div class="col-md-6">

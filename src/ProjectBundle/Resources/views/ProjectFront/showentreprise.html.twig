@@ -1,23 +1,23 @@
 {% extends "::base.html.twig" %}
 
 {% block body %}
+    <div class="col-md-3"></div>
     <div class="col-md-6">
         <h1> {{ entreprise.nom }} </h1>
         <p> Cette société totalise (Aremplir) stages à son actif</p>
 
         <h4><strong> Information de l'entreprise : </strong> </h4>
 
-        <p> Type d'entreprise : <select class='form-control'> <option> {{ entreprise.type }}</option></select> </p>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
 
-        <p> Chiffre d'affaires : {{ entreprise.chiffreaffaires }} </p>
+        <br/>
+        <button type="submit" class="btn btn-success">Modifier d'une entreprise</button>
 
-        <p> Adresse postale :  {{ entreprise.adresse }} </p>
+        {{ form_end(form) }}
 
-        <p> N° Téléphone :  {{ entreprise.telephone }} </p>
-
-        <p> Resp. Technique </p>
 
     </div>
-    <div class="col-md-6"></div>
+    <div class="col-md-3"></div>
 
 {% endblock %}
