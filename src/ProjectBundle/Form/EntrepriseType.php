@@ -2,6 +2,7 @@
 
 namespace ProjectBundle\Form;
 use ProjectBundle\Entity\Utilisateur;
+use ProjectBundle\Repository\UtilisateurRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
@@ -37,17 +38,17 @@ class EntrepriseType extends AbstractType
 
             'required' => true,
 
-        ],])->add('type' ,TextType::class, [
+        ],])->add('entrepriseType' ,EntityType::class, [
 
-            'label'       => 'Type',
+            'class' => 'ProjectBundle\Entity\EntrepriseType',
 
-            'attr'        => [
+            'attr'  => [
 
                 'class'    => 'form-control',
 
                 'required' => true,
 
-            ],])->add('adresse' ,TextType::class, [
+        ],])->add('adresse' ,TextType::class, [
 
             'label'       => 'Adresse',
 
@@ -71,7 +72,16 @@ class EntrepriseType extends AbstractType
 
             'class'       => 'ProjectBundle\Entity\Utilisateur',
 
-            'label'       => 'User',
+            'label'       => 'Responsable_technique',
+
+            'query_builder' => function (UtilisateurRepository $repository){
+
+                $roles='ROLE_REFPRO';
+
+                return $repository->createQueryBuilder('u')
+                    ->where('u.roles LIKE :roles')
+                    ->setParameter('roles', '%"'.$roles.'"%');
+            },
 
             'attr'        => [
 

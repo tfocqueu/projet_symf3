@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends '::base.html.twig' %}
 
 {% block body  %}
@@ -22,4 +23,31 @@
             {# endfor #}
         </select>
     </div>
+=======
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+
+        <fieldset class="cadre">
+            <legend class="legend"> {{ stage.libelleStage }}  </legend>
+
+
+            <h4><strong> Information du stage : </strong> </h4>
+
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+
+            <br/>
+        </fieldset>
+        <button type="submit" class="btn btn-success">Modifier le stage </button>
+
+        {{ form_end(form) }}
+
+
+    </div>
+    <div class="col-md-3"></div>
+
+>>>>>>> feature/showentreprise
 {% endblock %}

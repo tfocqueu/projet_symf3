@@ -14,11 +14,26 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="utilisateur")
  * @ORM\Entity(repositoryClass="ProjectBundle\Repository\UtilisateurRepository")
  *
- *
- *  @AttributeOverrides({
+ **  @AttributeOverrides({
  *     @AttributeOverride(name="emailCanonical",
  *         column=@ORM\Column(
  *             name="emailCanonical",
+ *             type="string",
+ *             length=255,
+ *             nullable=true
+ *         )
+ *     ),
+ *     @AttributeOverride(name="email",
+ *         column=@ORM\Column(
+ *             name="email",
+ *             type="string",
+ *             length=255,
+ *             nullable=true
+ *         )
+ *     ),
+ *     @AttributeOverride(name="prenom",
+ *         column=@ORM\Column(
+ *             name="prenom",
  *             type="string",
  *             length=255,
  *             nullable=true
@@ -56,7 +71,6 @@ use Doctrine\ORM\Mapping as ORM;
  *         )
  *     ),
  * })
-
  */
 class Utilisateur extends BaseUser
 {
@@ -88,22 +102,22 @@ class Utilisateur extends BaseUser
      *
      * @ORM\Column(name="adresse", type="string", length=255)
      */
-    private $adresse;
+    protected $adresse;
 
     /**
-     * @ORM\ManyToMany(targetEntity="ProjectBundle\Entity\Diplome",cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="ProjectBundle\Entity\Diplome",cascade={"persist"})
      */
-    private $diplomes;
+    protected $diplomes;
 
     /**
      * @ORM\ManyToOne(targetEntity="ProjectBundle\Entity\Stage",cascade={"persist"})
      */
-    private $stages;
+    protected $stages;
 
     /**
      * @ORM\ManyToOne(targetEntity="ProjectBundle\Entity\Entreprise",cascade={"persist"})
      */
-    private $entreprises;
+    protected $entreprises;
 
 
 
@@ -227,42 +241,6 @@ class Utilisateur extends BaseUser
         return $this->anneeobtention;
     }
 
-    
-
-    /**
-     * Add diplome
-     *
-     * @param \ProjectBundle\Entity\Diplome $diplome
-     *
-     * @return Utilisateur
-     */
-    public function addDiplome(\ProjectBundle\Entity\Diplome $diplome)
-    {
-        $this->diplomes[] = $diplome;
-
-        return $this;
-    }
-
-    /**
-     * Remove diplome
-     *
-     * @param \ProjectBundle\Entity\Diplome $diplome
-     */
-    public function removeDiplome(\ProjectBundle\Entity\Diplome $diplome)
-    {
-        $this->diplomes->removeElement($diplome);
-    }
-
-    /**
-     * Get diplomes
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getDiplomes()
-    {
-        return $this->diplomes;
-    }
-
     /**
      * Set stages
      *
@@ -309,5 +287,29 @@ class Utilisateur extends BaseUser
     public function getEntreprises()
     {
         return $this->entreprises;
+    }
+
+    /**
+     * Set diplomes
+     *
+     * @param \ProjectBundle\Entity\Diplome $diplomes
+     *
+     * @return Utilisateur
+     */
+    public function setDiplomes(\ProjectBundle\Entity\Diplome $diplomes = null)
+    {
+        $this->diplomes = $diplomes;
+
+        return $this;
+    }
+
+    /**
+     * Get diplomes
+     *
+     * @return \ProjectBundle\Entity\Diplome
+     */
+    public function getDiplomes()
+    {
+        return $this->diplomes;
     }
 }

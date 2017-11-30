@@ -3,25 +3,25 @@
 {% block body  %}
 
     <div class="col-md-6">
-        <h2>Rechercher une entreprise</h2>
+        <h2>Rechercher un type d'entreprise</h2>
 
-        <h4> Nom de l'entreprise </h4>
+        <h4> Nom du type de l'entreprise </h4>
         <table>
             <thead>
             <th>ID</th>
-            <th>Nom entreprise</th>
+            <th>Nom type</th>
             <th>Action</th>
             </thead>
-            {% for entreprise in lesEntreprises %}
+            {% for entreprisetype in lesTypesEntreprises %}
                 <tr>
                     <td>
-                        {{ entreprise.id }}
+                        {{ entreprisetype.id }}
                     </td>
                     <td>
-                        <a href={{ path('entreprise_show_id', {'entreprise' : entreprise.id }) }}> {{ entreprise.nom }}</a>
+                        {{ entreprisetype.libelle }}
                     </td>
                     <td>
-                        <a href="{{ path('entreprise_delete',{'entreprise' : entreprise.id}) }}">Supprimer l'entreprise </a>
+                        <a href="{{ path('entreprisetype_delete',{'entreprisetype' : entreprisetype.id}) }}">Supprimer le type entreprise </a>
                     </td>
                 </tr>
             {% endfor %}
@@ -29,11 +29,11 @@
     </div>
 
     <div class="col-md-6">
-        <h2>Ajouter une entreprise</h2>
+        <h2>Ajouter d'un type entreprise</h2>
         {{ form_start(form) }}
         {{ form_widget(form) }}
         <br>
-        <button type="submit" class="btn btn-success">Ajout d'une entreprise</button>
+        <button type="submit" class="btn btn-success">Ajout d'un type entreprise</button>
 
         {{ form_end(form) }}
     </div>

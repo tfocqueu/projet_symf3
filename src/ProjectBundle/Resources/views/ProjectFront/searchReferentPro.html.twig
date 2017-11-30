@@ -1,0 +1,34 @@
+{% extends '::base.html.twig' %}
+
+{% block body  %}
+
+    <div class="col-md-6">
+        <h2>Liste des référents professionnels</h2>
+        <table>
+            <thead>
+            <th>Nom</th>
+            <th>Action</th>
+            </thead>
+            {% for referentpro in lesReferentsPro %}
+                <tr>
+                    <td>
+                        {{ referentpro.nom }}
+                    </td>
+                    <td>
+                        <a href="{{ path('referent_pro_delete',{'referentpro' : referentpro.id}) }}">Supprimer le referent pro </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="col-md-6">
+        <h2>Ajout d'un référent professionnel</h2>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <br>
+        <button type="submit" class="btn btn-success">Ajouter</button>
+
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
