@@ -1,0 +1,25 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+
+        <fieldset class="cadre">
+            <legend class="legend"> {{ classe.libelle }}  </legend>
+
+            <h4><strong> Information de la classe : </strong> </h4>
+
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+
+            <br/>
+        </fieldset>
+        <button type="submit" class="btn btn-success">Modifier la classe</button>
+
+        {{ form_end(form) }}
+
+
+    </div>
+    <div class="col-md-3"></div>
+
+{% endblock %}

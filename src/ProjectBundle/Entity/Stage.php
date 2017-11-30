@@ -1,9 +1,6 @@
 <?php
-
 namespace ProjectBundle\Entity;
-
 use Doctrine\ORM\Mapping as ORM;
-
 /**
  * Stage
  *
@@ -20,37 +17,52 @@ class Stage
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
-
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Libelle_stage",type="string")
+     */
+    private $libelleStage;
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="annee", type="datetimetz")
      */
     private $annee;
-
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="datedebut", type="datetimetz")
      */
     private $datedebut;
-
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="datefin", type="datetimetz")
      */
     private $datefin;
-
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observation",type="string",length=500)
+     */
+    private $observation;
     /**
      * @ORM\ManyToOne(targetEntity="ProjectBundle\Entity\Visite",cascade={"persist"})
      */
     private $visits;
-
     /**
      * @ORM\ManyToMany(targetEntity="ProjectBundle\Entity\Technologie",cascade={"persist"})
      */
     private $technos;
+    /**
+     * @ORM\ManyToOne(targetEntity="ProjectBundle\Entity\Entreprise",cascade={"persist"})
+     */
+    private $enteprises;
+    /**
+     * @ORM\ManyToOne(targetEntity="ProjectBundle\Entity\Utilisateur",cascade={"persist"})
+     */
+    private $utilisateur;
 
     /**
      * Get id
@@ -61,7 +73,6 @@ class Stage
     {
         return $this->id;
     }
-
     /**
      * Set annee
      *
@@ -72,10 +83,8 @@ class Stage
     public function setAnnee($annee)
     {
         $this->annee = $annee;
-
         return $this;
     }
-
     /**
      * Get annee
      *
@@ -85,7 +94,6 @@ class Stage
     {
         return $this->annee;
     }
-
     /**
      * Set datedebut
      *
@@ -96,10 +104,8 @@ class Stage
     public function setDatedebut($datedebut)
     {
         $this->datedebut = $datedebut;
-
         return $this;
     }
-
     /**
      * Get datedebut
      *
@@ -109,7 +115,6 @@ class Stage
     {
         return $this->datedebut;
     }
-
     /**
      * Set datefin
      *
@@ -120,10 +125,8 @@ class Stage
     public function setDatefin($datefin)
     {
         $this->datefin = $datefin;
-
         return $this;
     }
-
     /**
      * Get datefin
      *
@@ -140,7 +143,6 @@ class Stage
     {
         $this->technos = new \Doctrine\Common\Collections\ArrayCollection();
     }
-
     /**
      * Set visits
      *
@@ -151,10 +153,8 @@ class Stage
     public function setVisits(\ProjectBundle\Entity\Visite $visits = null)
     {
         $this->visits = $visits;
-
         return $this;
     }
-
     /**
      * Get visits
      *
@@ -164,7 +164,6 @@ class Stage
     {
         return $this->visits;
     }
-
     /**
      * Add techno
      *
@@ -175,10 +174,8 @@ class Stage
     public function addTechno(\ProjectBundle\Entity\Technologie $techno)
     {
         $this->technos[] = $techno;
-
         return $this;
     }
-
     /**
      * Remove techno
      *
@@ -188,7 +185,6 @@ class Stage
     {
         $this->technos->removeElement($techno);
     }
-
     /**
      * Get technos
      *
@@ -197,5 +193,96 @@ class Stage
     public function getTechnos()
     {
         return $this->technos;
+    }
+    /**
+     * Set observation
+     *
+     * @param string $observation
+     *
+     * @return Stage
+     */
+    public function setObservation($observation)
+    {
+        $this->observation = $observation;
+        return $this;
+    }
+    /**
+     * Get observation
+     *
+     * @return string
+     */
+    public function getObservation()
+    {
+        return $this->observation;
+    }
+    /**
+     * Set enteprises
+     *
+     * @param \ProjectBundle\Entity\Entreprise $enteprises
+     *
+     * @return Stage
+     */
+    public function setEnteprises(\ProjectBundle\Entity\Entreprise $enteprises = null)
+    {
+        $this->enteprises = $enteprises;
+        return $this;
+    }
+    /**
+     * Get enteprises
+     *
+     * @return \ProjectBundle\Entity\Entreprise
+     */
+    public function getEnteprises()
+    {
+        return $this->enteprises;
+    }
+    /**
+     * Set libelleStage
+     *
+     * @param string $libelleStage
+     *
+     * @return Stage
+     */
+    public function setLibelleStage($libelleStage)
+    {
+        $this->libelleStage = $libelleStage;
+        return $this;
+    }
+    /**
+     * Get libelleStage
+     *
+     * @return string
+     */
+    public function getLibelleStage()
+    {
+        return $this->libelleStage;
+    }
+    public function __toString()
+    {
+        return $this->libelleStage;
+    }
+
+    /**
+     * Set utilisateur
+     *
+     * @param \ProjectBundle\Entity\Utilisateur $utilisateur
+     *
+     * @return Stage
+     */
+    public function setUtilisateur(\ProjectBundle\Entity\Utilisateur $utilisateur = null)
+    {
+        $this->utilisateur = $utilisateur;
+
+        return $this;
+    }
+
+    /**
+     * Get utilisateur
+     *
+     * @return \ProjectBundle\Entity\Utilisateur
+     */
+    public function getUtilisateur()
+    {
+        return $this->utilisateur;
     }
 }

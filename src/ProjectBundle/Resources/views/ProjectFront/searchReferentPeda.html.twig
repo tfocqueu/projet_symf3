@@ -1,0 +1,34 @@
+{% extends '::base.html.twig' %}
+
+{% block body  %}
+
+    <div class="col-md-6">
+        <h2>Liste des référents Pedagogiques</h2>
+        <table>
+            <thead>
+            <th>Nom</th>
+            <th>Action</th>
+            </thead>
+            {% for referentpeda in lesReferentsPeda %}
+                <tr>
+                    <td>
+                        {{ referentpeda.nom }}
+                    </td>
+                    <td>
+                        <a href="{{ path('referent_peda_delete',{'referentpeda' : referentpeda.id}) }}">Supprimer le referent peda </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="col-md-6">
+        <h2>Ajout d'un référent pédagogique</h2>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <br>
+        <button type="submit" class="btn btn-success">Ajouter</button>
+
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

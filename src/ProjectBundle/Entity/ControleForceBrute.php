@@ -94,4 +94,3 @@ class ControleForceBrute
         return $this->date;
     }
 }
-

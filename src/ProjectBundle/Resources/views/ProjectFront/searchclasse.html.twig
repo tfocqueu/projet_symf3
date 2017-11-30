@@ -3,25 +3,25 @@
 {% block body  %}
 
     <div class="col-md-6">
-        <h2>Rechercher une entreprise</h2>
+        <h2>Rechercher une classe</h2>
 
-        <h4> Nom de l'entreprise </h4>
+        <h4> Nom de la classe </h4>
         <table>
             <thead>
             <th>ID</th>
-            <th>Nom entreprise</th>
+            <th>Nom classe</th>
             <th>Action</th>
             </thead>
-            {% for entreprise in lesEntreprises %}
+            {% for classe in lesClasses %}
                 <tr>
                     <td>
-                        {{ entreprise.id }}
+                        {{ classe.id }}
                     </td>
                     <td>
-                        <a href={{ path('entreprise_show_id', {'entreprise' : entreprise.id }) }}> {{ entreprise.nom }}</a>
+                        <a href={{ path('classe_show_id', {'classe' : classe.id }) }}> {{ classe.libelle }}</a>
                     </td>
                     <td>
-                        <a href="{{ path('entreprise_delete',{'entreprise' : entreprise.id}) }}">Supprimer l'entreprise </a>
+                        <a href="{{ path('classe_delete',{'classe' : classe.id}) }}">Supprimer la classe </a>
                     </td>
                 </tr>
             {% endfor %}
@@ -29,11 +29,11 @@
     </div>
 
     <div class="col-md-6">
-        <h2>Ajouter une entreprise</h2>
+        <h2>Ajouter une classe</h2>
         {{ form_start(form) }}
         {{ form_widget(form) }}
         <br>
-        <button type="submit" class="btn btn-success">Ajout d'une entreprise</button>
+        <button type="submit" class="btn btn-success">Ajout d'une classe</button>
 
         {{ form_end(form) }}
     </div>

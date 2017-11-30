@@ -41,13 +41,6 @@ class Entreprise
     /**
      * @var string
      *
-     * @ORM\Column(name="type", type="string", length=255)
-     */
-    private $type;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="adresse", type="string", length=255)
      */
     private $adresse;
@@ -63,6 +56,11 @@ class Entreprise
      * @ORM\ManyToOne(targetEntity="ProjectBundle\Entity\Utilisateur",cascade={"persist"})
      */
     private $users;
+
+    /**
+     * @ORM\ManyToOne (targetEntity="ProjectBundle\Entity\EntrepriseType",cascade={"persist"})
+     */
+    private $EntrepriseType;
 
 
     /**
@@ -222,5 +220,29 @@ class Entreprise
     public function getUsers()
     {
         return $this->users;
+    }
+
+    /**
+     * Set entrepriseType
+     *
+     * @param \ProjectBundle\Entity\EntrepriseType $entrepriseType
+     *
+     * @return Entreprise
+     */
+    public function setEntrepriseType(\ProjectBundle\Entity\EntrepriseType $entrepriseType = null)
+    {
+        $this->EntrepriseType = $entrepriseType;
+
+        return $this;
+    }
+
+    /**
+     * Get entrepriseType
+     *
+     * @return \ProjectBundle\Entity\EntrepriseType
+     */
+    public function getEntrepriseType()
+    {
+        return $this->EntrepriseType;
     }
 }

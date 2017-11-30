@@ -1,26 +1,40 @@
 {% extends '::base.html.twig' %}
 
 {% block body  %}
-    <div class="left">
-        <div class="btn-group-vertical" role="group">
-            <button type="button" class="btn btn-danger">top</button>
-            <button type="button" class="btn btn-danger">Mid</button>
-            <button type="button" class="btn btn-danger">bot</button>
-        </div>
-    </div>
-    <div class="mid">
-        <h2>Gestion des stages</h2>
-        <h3>echercher un élèves</h3>
 
-        <p>Classe : </p>
-        <select name="classe" id="class">
-            {# for class in classes #}
-            {# endfor #}
-        </select>
-        <p>Eleve</p>
-        <select name="students" id="student">
-            {# for student in users #}
-            {# endfor #}
-        </select>
+    <div class="col-md-6">
+        <h2>Rechercher un stage</h2>
+
+        <h4> Nom du stage </h4>
+        <table>
+            <thead>
+            <th>ID</th>
+            <th>Nom stage</th>
+            <th>Action</th>
+            </thead>
+            {% for stage in lesStages %}
+                <tr>
+                    <td>
+                        {{ stage.id }}
+                    </td>
+                    <td>
+                        <a href={{ path('stage_show_id', {'stage' : stage.id }) }}> {{ stage.libelleStage }}</a>
+                    </td>
+                    <td>
+                        <a href="{{ path('stage_delete',{'stage' : stage.id}) }}">Supprimer le stage </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="col-md-6">
+        <h2>Ajouter un stage</h2>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <br>
+        <button type="submit" class="btn btn-success">Ajout d'un stage</button>
+
+        {{ form_end(form) }}
     </div>
 {% endblock %}

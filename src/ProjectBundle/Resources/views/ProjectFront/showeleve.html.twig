@@ -1,0 +1,49 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+
+        <fieldset class="cadre">
+            <legend class="legend"> {{ eleve.nom }}  </legend>
+
+            <h4><strong> Information sur l'élève : </strong> </h4>
+
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+
+            <br/>
+        </fieldset>
+        <button type="submit" class="btn btn-success">Modifier l'élève</button>
+
+        {{ form_end(form) }}
+
+
+    </div>
+    <div class="col-md-3"></div>
+
+    <div class="col-md-12">
+        <br> <br>
+    <table>
+            <thead>
+            <th>Nom stage</th>
+            <th>Action</th>
+            </thead>
+            {% for stage in lesStages %}
+
+                {% if stage.utilisateur  %}
+                <tr>
+                    <td>
+                        <a href={{ path('stage_show_id', {'stage' : stage.id }) }}> {{ stage.libelleStage }}</a>
+                    </td>
+                    <td>
+                        <a href="{{ path('stage_delete',{'stage' : stage.id}) }}">Supprimer le stage </a>
+                    </td>
+                </tr>
+                {% endif %}
+            {% endfor %}
+        </table>
+        <br> <br>
+    </div>
+
+{% endblock %}
