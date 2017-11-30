@@ -23,12 +23,6 @@ class Stage
      * @ORM\Column(name="Libelle_stage",type="string")
      */
     private $libelleStage;
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Libelle_stage",type="string")
-     */
-    private $libelleStage;
 
     /**
      * @var \DateTime
@@ -54,12 +48,7 @@ class Stage
      * @ORM\Column(name="observation",type="string",length=500)
      */
     private $observation;
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="observation",type="string",length=500)
-     */
-    private $observation;
+
 
     /**
      * @ORM\ManyToOne(targetEntity="ProjectBundle\Entity\Visite",cascade={"persist"})
@@ -78,10 +67,7 @@ class Stage
      */
     private $utilisateur;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="ProjectBundle\Entity\Entreprise",cascade={"persist"})
-     */
-    private $enteprises;
+
 
     /**
      * Get id
@@ -213,10 +199,7 @@ class Stage
     {
         return $this->technos;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> feature/showentreprise
     /**
      * Set observation
      *
@@ -227,15 +210,12 @@ class Stage
     public function setObservation($observation)
     {
         $this->observation = $observation;
-<<<<<<< HEAD
+
 
         return $this;
     }
 
-=======
-        return $this;
-    }
->>>>>>> feature/showentreprise
+
     /**
      * Get observation
      *
@@ -245,10 +225,7 @@ class Stage
     {
         return $this->observation;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> feature/showentreprise
     /**
      * Set enteprises
      *
@@ -259,15 +236,12 @@ class Stage
     public function setEnteprises(\ProjectBundle\Entity\Entreprise $enteprises = null)
     {
         $this->enteprises = $enteprises;
-<<<<<<< HEAD
+
 
         return $this;
     }
 
-=======
-        return $this;
-    }
->>>>>>> feature/showentreprise
+
     /**
      * Get enteprises
      *
@@ -277,10 +251,7 @@ class Stage
     {
         return $this->enteprises;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> feature/showentreprise
     /**
      * Set libelleStage
      *
@@ -291,15 +262,12 @@ class Stage
     public function setLibelleStage($libelleStage)
     {
         $this->libelleStage = $libelleStage;
-<<<<<<< HEAD
+
 
         return $this;
     }
 
-=======
-        return $this;
-    }
->>>>>>> feature/showentreprise
+
     /**
      * Get libelleStage
      *
@@ -309,16 +277,12 @@ class Stage
     {
         return $this->libelleStage;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> feature/showentreprise
     public function __toString()
     {
         return $this->libelleStage;
     }
-<<<<<<< HEAD
-=======
+
 
     /**
      * Set utilisateur
@@ -343,5 +307,5 @@ class Stage
     {
         return $this->utilisateur;
     }
->>>>>>> feature/showentreprise
+
 }
