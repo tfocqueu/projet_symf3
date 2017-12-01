@@ -22,15 +22,24 @@
     </div>
     <div class="col-md-3"></div>
 
-    <div class="col-md-12">
+    <div class="col-md-4">
         <br> <br>
-        <select name="stageselect" id="stageselect">
-            {% for stage in lesStages %}
-                <option value="{{ stage.id }}">{{ stage.libelleStage }}</option>
-            {% endfor %}
-        </select>
-        <a href="{{ path('add_stage_eleve',{'eleve' : eleve.id}) }}"><button type="submit" class="btn btn-info">Ajouter un stage pour {{ eleve.prenom }} {{ eleve.nom }} </button></a>
-    <table>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+
+        <br/>
+        <a href="{{ path('add_stage_eleve',{'id' : eleve.id}) }}"><button type="submit" class="btn btn-success">Ajouter le stage pour {{ eleve.prenom }} {{ eleve.nom }} </button></a>
+
+        {{ form_end(form) }}
+
+        <br>
+
+        <br><br>
+    </div>
+    <div class="col-md-8"></div>
+
+    <div class="col-md-12">
+        <table>
             <thead>
             <th>Nom stage</th>
             <th>Action</th>

@@ -6,6 +6,7 @@ use Monolog\Handler\Curl\Util;
 use ProjectBundle\Entity\Stage;
 use ProjectBundle\Entity\Utilisateur;
 use ProjectBundle\Form\EleveType;
+use ProjectBundle\Form\StageEleveType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -87,16 +88,26 @@ class EleveController extends Controller
     }
 
     /**
-     * @Route(name="add_stage_eleve")
+     * @Route("/eleve/add/stage/{id}",name="add_stage_eleve")
      */
-    public function addStageEleveAction(Utilisateur $eleve, Stage $stage)
+    public function addStageEleveAction(Request $request,$id)
     {
         $em = $this->getDoctrine()->getManager();
+        $eleve = $em->getRepository('ProjectBundle:Utilisateur')->find($id); // on récup le user en fonction de l'id
 
-        $eleve->setStages($stage);
-        $em->persist($eleve);
-        $em->flush();
+        $form = $this->createForm(StageEleveType::class, $eleve  );
+        $form->handleRequest($request);
+        if($form->isSubmitted()) {
+            $data = $form->getData();
+            /* @var \ProjectBundle\Entity\Stage $stage */
+            dump($data);die;
+            $eleve->setStages($stage);
+            $em->persist($eleve);
+            $em->flush();
+            return $this->redirectToRoute('eleve_show_id');
+        }
+        $formview = $form->createView();
 
-        return  $this->redirectToRoute('eleve_show_id');
+        return $this->render('@Project/ProjectFront/showeleve.html.twig',array('form'=>$formview));
     }
 }
