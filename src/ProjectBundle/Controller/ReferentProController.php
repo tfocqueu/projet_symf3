@@ -51,7 +51,7 @@ class ReferentProController extends Controller
     /**
      * @Route("/referentpro/{referentpro}", name="referent_pro_delete")
      */
-    public function deleteAction(Referentpro $referentpro)
+    public function deleteAction(Utilisateur $referentpro)
     {
         $em = $this->getDoctrine()->getManager();
         $em->remove($referentpro);

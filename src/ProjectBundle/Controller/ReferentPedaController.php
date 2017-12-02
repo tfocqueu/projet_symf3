@@ -51,7 +51,7 @@ class ReferentPedaController extends Controller
     /**
      * @Route("/referentpeda/{referentpeda}", name="referent_peda_delete")
      */
-    public function deleteAction(Referentpeda $referentpeda)
+    public function deleteAction(Utilisateur $referentpeda)
     {
         $em = $this->getDoctrine()->getManager();
         $em->remove($referentpeda);

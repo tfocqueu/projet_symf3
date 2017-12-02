@@ -96,7 +96,19 @@ class EleveController extends Controller
             $eleve->addStage($stage);
             $em->persist($eleve);
             $em->flush();
-            return $this->redirectToRoute('eleve_show');
+        return $this->redirectToRoute('eleve_show');
 
+    }
+    /**
+     * @Route("/eleve/delete/{eleve}/{stage}", name="stage_eleve_delete")
+     */
+    public function deleteStageEleveAction(Utilisateur $eleve, Stage $stage)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $eleve->removeStage($stage);
+        $em->persist($eleve);
+        $em->flush();
+
+        return $this->redirectToRoute('eleve_show');
     }
 }

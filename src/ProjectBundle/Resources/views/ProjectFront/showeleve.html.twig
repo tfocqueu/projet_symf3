@@ -36,7 +36,7 @@
                         <a href={{ path('stage_show_id', {'stage' : userstage.id }) }}> {{ userstage.libelleStage }}</a>
                     </td>
                     <td>
-                        <a href="{{ path('stage_delete',{'stage' : userstage.id}) }}">Supprimer le stage </a>
+                        <a href="{{ path('stage_eleve_delete',{'eleve' : eleve.id,'stage' : userstage.id}) }}">Supprimer le stage </a>
                     </td>
                 </tr>
             {% endfor %}
@@ -44,7 +44,7 @@
         <br> <br>
     </div>
     <div class="col-md-12">
-        <h2>Liste des stages pour ajout a l'élève</h2>
+        <h2>Liste des stages</h2>
         <table>
         <thdead>
             <th>Nom du stage</th>
@@ -59,8 +59,9 @@
                 <a href="{{ path('add_stage_eleve',{'eleve' : eleve.id,'stage' : stage.id}) }}">Ajouter le stage a {{ eleve.prenom }}</a>
             </td>
         </tr>
-        </table>
         {% endfor %}
+        </table>
+        <br> <br>
     </div>
 
 {% endblock %}
