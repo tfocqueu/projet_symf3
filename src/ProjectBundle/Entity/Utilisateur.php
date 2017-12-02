@@ -5,6 +5,9 @@ namespace ProjectBundle\Entity;
 use Doctrine\ORM\Query\Expr\Base;
 use Doctrine\ORM\Mapping\AttributeOverrides;
 use Doctrine\ORM\Mapping\AttributeOverride;
+use ProjectBundle\Entity\Stage;
+use ProjectBundle\Entity\Entreprise;
+use ProjectBundle\Entity\Diplome;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -13,8 +16,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="utilisateur")
  * @ORM\Entity(repositoryClass="ProjectBundle\Repository\UtilisateurRepository")
- *
- **  @AttributeOverrides({
+ ***  @AttributeOverrides({
  *     @AttributeOverride(name="emailCanonical",
  *         column=@ORM\Column(
  *             name="emailCanonical",
@@ -110,7 +112,7 @@ class Utilisateur extends BaseUser
     protected $diplomes;
 
     /**
-     * @ORM\ManyToOne(targetEntity="ProjectBundle\Entity\Stage",cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="ProjectBundle\Entity\Stage",cascade={"persist"})
      */
     protected $stages;
 
@@ -241,29 +243,9 @@ class Utilisateur extends BaseUser
         return $this->anneeobtention;
     }
 
-    /**
-     * Set stages
-     *
-     * @param \ProjectBundle\Entity\Stage $stages
-     *
-     * @return Utilisateur
-     */
-    public function setStages(\ProjectBundle\Entity\Stage $stages = null)
-    {
-        $this->stages = $stages;
 
-        return $this;
-    }
 
-    /**
-     * Get stages
-     *
-     * @return \ProjectBundle\Entity\Stage
-     */
-    public function getStages()
-    {
-        return $this->stages;
-    }
+
 
     /**
      * Set entreprises
@@ -272,7 +254,7 @@ class Utilisateur extends BaseUser
      *
      * @return Utilisateur
      */
-    public function setEntreprises(\ProjectBundle\Entity\Entreprise $entreprises = null)
+    public function setEntreprises(Entreprise $entreprises = null)
     {
         $this->entreprises = $entreprises;
 
@@ -296,7 +278,7 @@ class Utilisateur extends BaseUser
      *
      * @return Utilisateur
      */
-    public function setDiplomes(\ProjectBundle\Entity\Diplome $diplomes = null)
+    public function setDiplomes(Diplome $diplomes = null)
     {
         $this->diplomes = $diplomes;
 
@@ -311,5 +293,39 @@ class Utilisateur extends BaseUser
     public function getDiplomes()
     {
         return $this->diplomes;
+    }
+
+    /**
+     * Add stage
+     *
+     * @param \ProjectBundle\Entity\Stage $stage
+     *
+     * @return Utilisateur
+     */
+    public function addStage(\ProjectBundle\Entity\Stage $stage)
+    {
+        $this->stages[] = $stage;
+
+        return $this;
+    }
+
+    /**
+     * Remove stage
+     *
+     * @param \ProjectBundle\Entity\Stage $stage
+     */
+    public function removeStage(\ProjectBundle\Entity\Stage $stage)
+    {
+        $this->stages->removeElement($stage);
+    }
+
+    /**
+     * Get stages
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getStages()
+    {
+        return $this->stages;
     }
 }

@@ -21,44 +21,46 @@
 
     </div>
     <div class="col-md-3"></div>
-
-    <div class="col-md-4">
-        <br> <br>
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
-
-        <br/>
-        <a href="{{ path('add_stage_eleve',{'id' : eleve.id}) }}"><button type="submit" class="btn btn-success">Ajouter le stage pour {{ eleve.prenom }} {{ eleve.nom }} </button></a>
-
-        {{ form_end(form) }}
-
-        <br>
-
-        <br><br>
-    </div>
     <div class="col-md-8"></div>
 
     <div class="col-md-12">
+        <h2>Stages de {{ eleve.prenom }} {{ eleve.nom }}</h2>
         <table>
             <thead>
-            <th>Nom stage</th>
+            <th>Nom du stage</th>
             <th>Action</th>
             </thead>
-            {% for stage in lesStages %}
-
-                {% if stage.utilisateur  %}
+            {% for userstage in eleve.stages %}
                 <tr>
                     <td>
-                        <a href={{ path('stage_show_id', {'stage' : stage.id }) }}> {{ stage.libelleStage }}</a>
+                        <a href={{ path('stage_show_id', {'stage' : userstage.id }) }}> {{ userstage.libelleStage }}</a>
                     </td>
                     <td>
-                        <a href="{{ path('stage_delete',{'stage' : stage.id}) }}">Supprimer le stage </a>
+                        <a href="{{ path('stage_delete',{'stage' : userstage.id}) }}">Supprimer le stage </a>
                     </td>
                 </tr>
-                {% endif %}
             {% endfor %}
         </table>
         <br> <br>
+    </div>
+    <div class="col-md-12">
+        <h2>Liste des stages pour ajout a l'élève</h2>
+        <table>
+        <thdead>
+            <th>Nom du stage</th>
+            <th>Action</th>
+        </thdead>
+        {% for stage in lesStages %}
+        <tr>
+            <td>
+                <a href={{ path('stage_show_id', {'stage' : stage.id }) }}> {{ stage.libelleStage }}</a>
+            </td>
+            <td>
+                <a href="{{ path('add_stage_eleve',{'eleve' : eleve.id,'stage' : stage.id}) }}">Ajouter le stage a {{ eleve.prenom }}</a>
+            </td>
+        </tr>
+        </table>
+        {% endfor %}
     </div>
 
 {% endblock %}

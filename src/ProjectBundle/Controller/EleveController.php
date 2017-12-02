@@ -88,26 +88,15 @@ class EleveController extends Controller
     }
 
     /**
-     * @Route("/eleve/add/stage/{id}",name="add_stage_eleve")
+     * @Route("/eleve/add/stage/{eleve}/{stage}",name="add_stage_eleve")
      */
-    public function addStageEleveAction(Request $request,$id)
+    public function addStageEleveAction(Utilisateur $eleve, Stage $stage)
     {
         $em = $this->getDoctrine()->getManager();
-        $eleve = $em->getRepository('ProjectBundle:Utilisateur')->find($id); // on récup le user en fonction de l'id
-
-        $form = $this->createForm(StageEleveType::class, $eleve  );
-        $form->handleRequest($request);
-        if($form->isSubmitted()) {
-            $data = $form->getData();
-            /* @var \ProjectBundle\Entity\Stage $stage */
-            dump($data);die;
-            $eleve->setStages($stage);
+            $eleve->addStage($stage);
             $em->persist($eleve);
             $em->flush();
-            return $this->redirectToRoute('eleve_show_id');
-        }
-        $formview = $form->createView();
+            return $this->redirectToRoute('eleve_show');
 
-        return $this->render('@Project/ProjectFront/showeleve.html.twig',array('form'=>$formview));
     }
 }
