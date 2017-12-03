@@ -3,6 +3,7 @@
 namespace ProjectBundle\Controller;
 
 use ProjectBundle\Entity\Classe;
+use ProjectBundle\Entity\Utilisateur;
 use ProjectBundle\Form\ClasseType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -77,7 +78,13 @@ class ClasseController extends Controller
 
         $formview = $form->createView();
 
-        return $this->render('@Project/ProjectFront/showclasse.html.twig', array('classe'=> $classe,'form'=>$formview));
+        $role = "ROLE_ELEVE";
+
+        $repository = $this->getDoctrine()->getManager()->getRepository('ProjectBundle:Utilisateur');
+
+        $listEleve = $repository->findByRoles($role);
+
+        return $this->render('@Project/ProjectFront/showclasse.html.twig', array('classe'=> $classe,'form'=>$formview,'lesEleves' => $listEleve));
     }
 
     /**
@@ -89,6 +96,28 @@ class ClasseController extends Controller
         $em->remove($classe);
         $em->flush();
 
+        return $this->redirectToRoute('classe_show');
+    }
+
+    /**
+     * @Route("/classe/add/{classe}/{eleve}",name="classe_eleve_add")
+     */
+    public function  addEleveClasseAction(Classe $classe, Utilisateur $eleve){
+        $em = $this->getDoctrine()->getManager();
+        $classe->addLesElefe($eleve);
+        $em->persist($classe);
+        $em->flush();
+        return $this->redirectToRoute('classe_show');
+    }
+
+    /**
+     * @Route("/classe/delete/{classe}/{eleve}",name="classe_eleve_delete")
+     */
+    public  function  deleteEleveAction(Classe $classe, Utilisateur $eleve){
+        $em = $this->getDoctrine()->getManager();
+        $classe->removeLesElefe($eleve);
+        $em->persist($classe);
+        $em->flush();
         return $this->redirectToRoute('classe_show');
     }
 

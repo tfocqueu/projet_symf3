@@ -41,6 +41,11 @@ class Classe
     private $laPromo;
 
     /**
+     * @ORM\ManyToMany(targetEntity="ProjectBundle\Entity\Utilisateur",cascade={"persist"})
+     */
+    private $lesEleves;
+
+    /**
      * Get id
      *
      * @return int
@@ -142,5 +147,39 @@ class Classe
     public function getLaPromo()
     {
         return $this->laPromo;
+    }
+
+    /**
+     * Add lesElefe
+     *
+     * @param \ProjectBundle\Entity\Utilisateur $lesElefe
+     *
+     * @return Classe
+     */
+    public function addLesElefe(\ProjectBundle\Entity\Utilisateur $lesElefe)
+    {
+        $this->lesEleves[] = $lesElefe;
+
+        return $this;
+    }
+
+    /**
+     * Remove lesElefe
+     *
+     * @param \ProjectBundle\Entity\Utilisateur $lesElefe
+     */
+    public function removeLesElefe(\ProjectBundle\Entity\Utilisateur $lesElefe)
+    {
+        $this->lesEleves->removeElement($lesElefe);
+    }
+
+    /**
+     * Get lesEleves
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getLesEleves()
+    {
+        return $this->lesEleves;
     }
 }

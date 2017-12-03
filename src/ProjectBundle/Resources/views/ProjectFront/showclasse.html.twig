@@ -21,5 +21,45 @@
 
     </div>
     <div class="col-md-3"></div>
+    <div class="col-md-12">
+        <h2>Eleves de la classe {{ classe.libelle }}</h2>
+        <table>
+            <thead>
+            <th>Nom de l'élève </th>
+            <th>Action</th>
+            </thead>
+            {% for userclass in classe.lesEleves %}
+                <tr>
+                    <td>
+                        <a href="{{ path('eleve_show_id',{'eleve' : userclass.id}) }}"> {{ userclass.prenom }} {{ userclass.nom }}</a>
+                    </td>
+                    <td>
+                        <a href="{{ path('classe_eleve_delete',{'classe' : classe.id,'eleve': userclass.id}) }}">Supprimer {{ userclass.nom }} {{ userclass.prenom }} de la classe </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        <br> <br>
+    </div>
+    <div class="col-md-12">
+        <h2>Liste des élèves disponible</h2>
+        <table>
+            <thdead>
+                <th>Eleve pour ajout</th>
+                <th>Action</th>
+            </thdead>
+            {% for eleve in lesEleves %}
+                <tr>
+                    <td>
+                        <a href="{{ path('eleve_show_id',{'eleve' : eleve.id}) }}">{{ eleve.prenom }} {{ eleve.nom }}</a>
+                    </td>
+                    <td>
+                        <a href="{{ path('classe_eleve_add',{'classe' : classe.id,'eleve': eleve.id}) }}">Ajout de {{ eleve.prenom }} {{ eleve.nom }} dans la classe {{ classe.libelle }}</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        <br> <br>
+    </div>
 
 {% endblock %}
