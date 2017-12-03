@@ -62,6 +62,11 @@ class Entreprise
      */
     private $EntrepriseType;
 
+    /**
+     * @ORM\ManyToOne (targetEntity="ProjectBundle\Entity\Stage",cascade={"persist"})
+     */
+    private $stage;
+
 
     /**
      * Get id
@@ -244,5 +249,29 @@ class Entreprise
     public function getEntrepriseType()
     {
         return $this->EntrepriseType;
+    }
+
+    /**
+     * Set stage
+     *
+     * @param \ProjectBundle\Entity\Stage $stage
+     *
+     * @return Entreprise
+     */
+    public function setStage(\ProjectBundle\Entity\Stage $stage = null)
+    {
+        $this->stage = $stage;
+
+        return $this;
+    }
+
+    /**
+     * Get stage
+     *
+     * @return \ProjectBundle\Entity\Stage
+     */
+    public function getStage()
+    {
+        return $this->stage;
     }
 }

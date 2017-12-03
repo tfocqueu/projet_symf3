@@ -60,7 +60,10 @@ class EntrepriseController extends Controller
 
         $formview = $form->createView();
 
-        return $this->render('@Project/ProjectFront/showentreprise.html.twig', array('entreprise'=> $entreprise,'form'=>$formview));
+        $repositoryStage = $this->getDoctrine()->getManager()->getRepository('ProjectBundle:Stage');
+        $listStage = $repositoryStage->findAll();
+
+        return $this->render('@Project/ProjectFront/showentreprise.html.twig', array('entreprise'=> $entreprise,'stages'=>$listStage,'form'=>$formview));
     }
 
     /**
