@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54c4ae70-9f85-43c7-8a58-72620a408631" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/ClasseType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/ClasseType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/DiplomeType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/DiplomeType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/EleveType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/EleveType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/EntrepriseType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/EntrepriseType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/EntrepriseTypeType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/EntrepriseTypeType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/ReferentPedaType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/ReferentPedaType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/ReferentProType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/ReferentProType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/StageEleveType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/StageEleveType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/StageType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/StageType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/TechnologieType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/TechnologieType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/VisiteType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/VisiteType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Resources/views/Form/RegistrationType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/RegistrationType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ProjectBundle/Controller/SecurityController.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Controller/SecurityController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ProjectBundle/Event/fail.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Event/fail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app.php" afterPath="$PROJECT_DIR$/web/app.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,7 +32,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/config.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="257">
@@ -105,16 +92,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SecurityController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SecurityController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/SecurityController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+            <state relative-caret-position="-729">
+              <caret line="57" column="55" lean-forward="false" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
               <folding>
                 <element signature="e#305#350#0#PHP" expanded="true" />
-                <element signature="e#1756#1781#1#PHP" expanded="true" />
-                <element signature="e#2267#2292#1#PHP" expanded="true" />
-                <element signature="e#2384#2409#1#PHP" expanded="true" />
+                <element signature="e#1703#1728#1#PHP" expanded="true" />
+                <element signature="e#2214#2239#1#PHP" expanded="true" />
+                <element signature="e#2331#2356#1#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -166,9 +153,9 @@
         <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/web/app.php" />
-        <option value="$PROJECT_DIR$/src/ProjectBundle/Controller/SecurityController.php" />
         <option value="$PROJECT_DIR$/src/ProjectBundle/Event/fail.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/ProjectBundle/Controller/SecurityController.php" />
       </list>
     </option>
   </component>
@@ -276,16 +263,34 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Event" />
+              <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fail.php" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpFileNode" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projet_symf3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fail" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpElementNode" />
+              <option name="myItemId" value="projet_symf3" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -324,24 +329,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projet_symf3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projet_symf3" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -359,6 +346,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp\www\projet_symf3\src\ProjectBundle\Form\Type" />
+      <recent name="C:\wamp\www\projet_symf3\src\ProjectBundle\Form" />
     </key>
   </component>
   <component name="RunManager">
@@ -434,12 +422,12 @@
       <workItem from="1512126241705" duration="36000" />
       <workItem from="1512142746961" duration="2246000" />
       <workItem from="1512225852857" duration="3374000" />
-      <workItem from="1512405573666" duration="5154000" />
+      <workItem from="1512405573666" duration="5337000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13897000" />
+    <option name="totallyTimeSpent" value="14080000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -872,19 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/SecurityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding>
-            <element signature="e#305#350#0#PHP" expanded="true" />
-            <element signature="e#1756#1781#1#PHP" expanded="true" />
-            <element signature="e#2267#2292#1#PHP" expanded="true" />
-            <element signature="e#2384#2409#1#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Event/fail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -906,6 +881,19 @@
         <state relative-caret-position="257">
           <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/SecurityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-729">
+          <caret line="57" column="55" lean-forward="false" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+          <folding>
+            <element signature="e#305#350#0#PHP" expanded="true" />
+            <element signature="e#1703#1728#1#PHP" expanded="true" />
+            <element signature="e#2214#2239#1#PHP" expanded="true" />
+            <element signature="e#2331#2356#1#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

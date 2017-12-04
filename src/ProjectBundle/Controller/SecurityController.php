@@ -57,8 +57,6 @@ class SecurityController extends BaseController
 
         $authErrorKey = Security::AUTHENTICATION_ERROR;
 
-        $lastUsernameKey = Security::LAST_USERNAME;
-
         // get the error if any (works with forward and redirect -- see below)
 
         if ($request->attributes->has($authErrorKey)) {
