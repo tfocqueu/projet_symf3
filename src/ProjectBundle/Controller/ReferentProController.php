@@ -49,7 +49,7 @@ class ReferentProController extends Controller
     }
 
     /**
-     * @Route("/referentpro/{referentpro}", name="referent_pro_delete")
+     * @Route("/referentpro/{referentpro}", name="referent_pro_delete" , methods={"GET","HEAD"})
      */
     public function deleteAction(Utilisateur $referentpro)
     {
