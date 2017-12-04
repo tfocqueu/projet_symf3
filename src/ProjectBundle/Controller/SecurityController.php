@@ -20,11 +20,16 @@ namespace ProjectBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+
 use Symfony\Component\HttpFoundation\Response;
 
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 
 use Symfony\Component\Security\Core\Security;
+
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
 
 use FOS\UserBundle\Controller\SecurityController as BaseController;
 
@@ -83,7 +88,9 @@ class SecurityController extends BaseController
 
         $csrfToken = $this->has('security.csrf.token_manager') ? $this->get('security.csrf.token_manager')->getToken('authenticate')->getValue() : null;
 
-        return $this->renderLogin(array('last_username' => $lastUsername, 'error' => $error,'csrf_token' => $csrfToken,));
+
+
+        return $this->redirectToRoute('fos_user_security_login');
 
     }
 
@@ -115,7 +122,7 @@ class SecurityController extends BaseController
 
     {
 
-        throw new \RuntimeException('You must configure the check path to be handled by the firewall using form_login in your security firewall configuration.');
+        return $this->redirectToRoute('fos_user_security_login');
 
     }
 
@@ -123,7 +130,7 @@ class SecurityController extends BaseController
 
     {
 
-        throw new \RuntimeException('You must activate the logout in your security firewall configuration.');
+        return $this->redirectToRoute('fos_user_security_login');
 
     }
 
