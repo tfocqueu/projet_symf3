@@ -1,6 +1,6 @@
 <?php
 
-namespace ProjectBundle\Form;
+namespace ProjectBundle\Form\Type;
 
 
 use Symfony\Component\Form\AbstractType;
@@ -9,7 +9,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 
-class ClasseType extends AbstractType
+class ReferentProType extends AbstractType
 
 {
 
@@ -23,7 +23,7 @@ class ClasseType extends AbstractType
 
     {
 
-        $builder->add('libelle',TextType::class,array(
+        $builder->add('nom',TextType::class,array(
 
             'attr'   => [
 
@@ -33,16 +33,7 @@ class ClasseType extends AbstractType
 
             ]
 
-        ))->add('designation',TextType::class,array(
-
-            'attr'   => [
-
-                'class'    => 'form-control',
-
-                'required' => true,
-
-            ]
-            ));
+        ));
 
     }
 
@@ -59,7 +50,7 @@ class ClasseType extends AbstractType
 
         $resolver->setDefaults(array(
 
-            'data_class' => 'ProjectBundle\Entity\Classe'
+            'data_class' => 'ProjectBundle\Entity\Utilisateur'
 
         ));
 
@@ -75,7 +66,7 @@ class ClasseType extends AbstractType
 
     {
 
-        return 'projectbundle_classe';
+        return 'projectbundle_referentProTyp';
 
     }
 

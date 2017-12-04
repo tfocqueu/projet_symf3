@@ -1,6 +1,6 @@
 <?php
 
-namespace ProjectBundle\Form;
+namespace ProjectBundle\Form\Type;
 
 
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;

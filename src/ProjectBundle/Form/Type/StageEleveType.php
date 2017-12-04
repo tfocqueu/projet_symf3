@@ -1,14 +1,15 @@
 <?php
 
-namespace ProjectBundle\Form;
+namespace ProjectBundle\Form\Type;
 
-
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class ReferentPedaType extends AbstractType
+
+
+class StageEleveType extends AbstractType
 
 {
 
@@ -22,17 +23,19 @@ class ReferentPedaType extends AbstractType
 
     {
 
-        $builder->add('nom',TextType::class,array(
+        $builder->add('stage',EntityType::class,array(
 
-            'attr'   => [
+                'class' => 'ProjectBundle\Entity\Stage',
 
-                'class'    => 'form-control',
+                'attr'        => [
 
-                'required' => true,
+                    'class'    => 'form-control',
 
-            ]
+                    'required' => true,
 
-        ));
+                ],
+
+            ));
 
     }
 
@@ -49,7 +52,7 @@ class ReferentPedaType extends AbstractType
 
         $resolver->setDefaults(array(
 
-            'data_class' => 'ProjectBundle\Entity\Utilisateur'
+            'data_class' => 'ProjectBundle\Entity\Eleve'
 
         ));
 
@@ -65,8 +68,9 @@ class ReferentPedaType extends AbstractType
 
     {
 
-        return 'projectbundle_referentPedaType';
+        return 'projectbundle_eleve';
 
     }
 
 }
+

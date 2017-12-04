@@ -4,7 +4,7 @@ namespace ProjectBundle\Controller;
 
 
 use ProjectBundle\Entity\Visite;
-use ProjectBundle\Form\VisiteType;
+use ProjectBundle\Form\Type\VisiteType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;

@@ -1,6 +1,6 @@
 <?php
 
-namespace ProjectBundle\Form;
+namespace ProjectBundle\Form\Type;
 
 
 use Symfony\Component\Form\AbstractType;
@@ -8,8 +8,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-
-class ReferentProType extends AbstractType
+class EntrepriseTypeType extends AbstractType
 
 {
 
@@ -23,7 +22,7 @@ class ReferentProType extends AbstractType
 
     {
 
-        $builder->add('nom',TextType::class,array(
+        $builder->add('libelle',TextType::class,array(
 
             'attr'   => [
 
@@ -50,7 +49,7 @@ class ReferentProType extends AbstractType
 
         $resolver->setDefaults(array(
 
-            'data_class' => 'ProjectBundle\Entity\Utilisateur'
+            'data_class' => 'ProjectBundle\Entity\EntrepriseType'
 
         ));
 
@@ -66,7 +65,7 @@ class ReferentProType extends AbstractType
 
     {
 
-        return 'projectbundle_referentProTyp';
+        return 'projectbundle_entrepriseType';
 
     }
 

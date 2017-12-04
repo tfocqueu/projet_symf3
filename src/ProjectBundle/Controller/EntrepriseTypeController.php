@@ -3,7 +3,7 @@
 namespace ProjectBundle\Controller;
 
 use ProjectBundle\Entity\EntrepriseType;
-use ProjectBundle\Form\EntrepriseTypeType;
+use ProjectBundle\Form\Type\EntrepriseTypeType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;

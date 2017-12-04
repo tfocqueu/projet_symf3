@@ -2,25 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54c4ae70-9f85-43c7-8a58-72620a408631" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/ClasseType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/ClasseType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/DiplomeType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/DiplomeType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/EleveType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/EleveType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/EntrepriseType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/EntrepriseType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/EntrepriseTypeType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/EntrepriseTypeType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/ReferentPedaType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/ReferentPedaType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/ReferentProType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/ReferentProType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/RegistrationType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/RegistrationType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/StageEleveType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/StageEleveType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/StageType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/StageType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/TechnologieType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/TechnologieType.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/VisiteType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/VisiteType.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/ClasseType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/ClasseType.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/DiplomeType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/DiplomeType.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/EleveType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/EleveType.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/EntrepriseType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/EntrepriseType.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/EntrepriseTypeType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/EntrepriseTypeType.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/ReferentPedaType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/ReferentPedaType.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/ReferentProType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/ReferentProType.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/RegistrationType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/RegistrationType.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/StageEleveType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/StageEleveType.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/StageType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/StageType.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/TechnologieType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/TechnologieType.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ProjectBundle/Form/VisiteType.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Form/Type/VisiteType.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ProjectBundle/Controller/ClasseController.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Controller/ClasseController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ProjectBundle/Controller/DiplomeController.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Controller/DiplomeController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ProjectBundle/Controller/EleveController.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Controller/EleveController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ProjectBundle/Controller/EntrepriseController.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Controller/EntrepriseController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ProjectBundle/Controller/EntrepriseTypeController.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Controller/EntrepriseTypeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ProjectBundle/Controller/IndexController.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Controller/IndexController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ProjectBundle/Controller/ReferentPedaController.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Controller/ReferentPedaController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ProjectBundle/Controller/ReferentProController.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Controller/ReferentProController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ProjectBundle/Controller/StageController.php" afterPath="$PROJECT_DIR$/src/ProjectBundle/Controller/StageController.php" />
@@ -40,45 +39,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StageController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StageController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/StageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="17" column="64" lean-forward="false" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
+            <state relative-caret-position="170">
+              <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
               <folding>
-                <element signature="e#46#103#0#PHP" expanded="true" />
-                <element signature="e#983#995#1#PHP" expanded="true" />
+                <element signature="e#988#1000#1#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TechnologieController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/TechnologieController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="16" column="71" lean-forward="false" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VisiteController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/VisiteController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="15" column="66" lean-forward="false" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DiplomeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/DiplomeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -86,18 +54,30 @@
       <file leaf-file-name="EleveController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/EleveController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="19" column="56" lean-forward="false" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+            <state relative-caret-position="119">
+              <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClasseController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/ClasseController.php">
+      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="15" column="57" lean-forward="false" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+            <state relative-caret-position="170">
+              <caret line="10" column="56" lean-forward="false" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+              <folding>
+                <element signature="e#43#75#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReferentPedaController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/ReferentPedaController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -106,8 +86,8 @@
       <file leaf-file-name="ReferentProController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/ReferentProController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="16" column="76" lean-forward="false" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
+            <state relative-caret-position="85">
+              <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -116,18 +96,30 @@
       <file leaf-file-name="SecurityController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/SecurityController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="45" column="23" lean-forward="true" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+            <state relative-caret-position="527">
+              <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+              <folding>
+                <element signature="e#305#350#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TechnologieController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/TechnologieController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="53">
+              <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReferentPedaController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/ReferentPedaController.php">
+      <file leaf-file-name="VisiteController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/VisiteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="51" column="97" lean-forward="false" selection-start-line="51" selection-start-column="97" selection-end-line="51" selection-end-column="97" />
+            <state relative-caret-position="91">
+              <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -136,8 +128,18 @@
       <file leaf-file-name="EntrepriseController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/EntrepriseController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="14" column="65" lean-forward="false" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
+            <state relative-caret-position="85">
+              <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntrepriseTypeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/EntrepriseTypeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -158,11 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ProjectBundle/Form/StageEleveType.php" />
-        <option value="$PROJECT_DIR$/app/config/.sensiolabs.yml" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/web/app.php" />
         <option value="$PROJECT_DIR$/src/ProjectBundle/Controller/SecurityController.php" />
         <option value="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Tests/Functional/AutowiringTypesTest.php" />
@@ -171,12 +168,6 @@
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/src/ProjectBundle/Event/fail.php" />
-        <option value="$PROJECT_DIR$/src/ProjectBundle/Form/Type/ClasseType.php" />
-        <option value="$PROJECT_DIR$/src/ProjectBundle/Form/Type/EleveType.php" />
-        <option value="$PROJECT_DIR$/src/ProjectBundle/Form/Type/EntrepriseType.php" />
-        <option value="$PROJECT_DIR$/src/ProjectBundle/Form/Type/EntrepriseTypeType.php" />
-        <option value="$PROJECT_DIR$/src/ProjectBundle/Form/Type/ReferentPedaType.php" />
-        <option value="$PROJECT_DIR$/src/ProjectBundle/Form/Type/RegistrationType.php" />
         <option value="$PROJECT_DIR$/src/ProjectBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/ProjectBundle/Resources/views/ProjectFront/accueil.html.twig" />
         <option value="$PROJECT_DIR$/src/ProjectBundle/Resources/views/ProjectFront/classeadd.html.twig" />
@@ -197,16 +188,27 @@
         <option value="$PROJECT_DIR$/src/ProjectBundle/Resources/views/ProjectFront/technologie.html.twig" />
         <option value="$PROJECT_DIR$/src/ProjectBundle/Resources/views/ProjectFront/visite.html.twig" />
         <option value="$PROJECT_DIR$/src/ProjectBundle/Resources/views/Security/login_content.html.twig" />
-        <option value="$PROJECT_DIR$/src/ProjectBundle/Form/Type/ReferentProType.php" />
         <option value="$PROJECT_DIR$/src/ProjectBundle/Controller/IndexController.php" />
-        <option value="$PROJECT_DIR$/src/ProjectBundle/Controller/EntrepriseTypeController.php" />
-        <option value="$PROJECT_DIR$/src/ProjectBundle/Controller/EntrepriseController.php" />
-        <option value="$PROJECT_DIR$/src/ProjectBundle/Controller/EleveController.php" />
-        <option value="$PROJECT_DIR$/src/ProjectBundle/Controller/DiplomeController.php" />
+        <option value="$PROJECT_DIR$/src/ProjectBundle/Form/Type/StageType.php" />
+        <option value="$PROJECT_DIR$/src/ProjectBundle/Controller/StageController.php" />
+        <option value="$PROJECT_DIR$/src/ProjectBundle/Form/Type/ClasseType.php" />
+        <option value="$PROJECT_DIR$/src/ProjectBundle/Form/Type/DiplomeType.php" />
+        <option value="$PROJECT_DIR$/src/ProjectBundle/Form/Type/EleveType.php" />
+        <option value="$PROJECT_DIR$/src/ProjectBundle/Form/Type/EntrepriseType.php" />
+        <option value="$PROJECT_DIR$/src/ProjectBundle/Form/Type/EntrepriseTypeType.php" />
+        <option value="$PROJECT_DIR$/src/ProjectBundle/Form/Type/ReferentPedaType.php" />
+        <option value="$PROJECT_DIR$/src/ProjectBundle/Form/Type/ReferentProType.php" />
+        <option value="$PROJECT_DIR$/src/ProjectBundle/Form/Type/RegistrationType.php" />
+        <option value="$PROJECT_DIR$/src/ProjectBundle/Form/Type/StageEleveType.php" />
+        <option value="$PROJECT_DIR$/src/ProjectBundle/Form/Type/TechnologieType.php" />
+        <option value="$PROJECT_DIR$/src/ProjectBundle/Form/Type/VisiteType.php" />
         <option value="$PROJECT_DIR$/src/ProjectBundle/Controller/ClasseController.php" />
+        <option value="$PROJECT_DIR$/src/ProjectBundle/Controller/DiplomeController.php" />
+        <option value="$PROJECT_DIR$/src/ProjectBundle/Controller/EleveController.php" />
+        <option value="$PROJECT_DIR$/src/ProjectBundle/Controller/EntrepriseController.php" />
+        <option value="$PROJECT_DIR$/src/ProjectBundle/Controller/EntrepriseTypeController.php" />
         <option value="$PROJECT_DIR$/src/ProjectBundle/Controller/ReferentPedaController.php" />
         <option value="$PROJECT_DIR$/src/ProjectBundle/Controller/ReferentProController.php" />
-        <option value="$PROJECT_DIR$/src/ProjectBundle/Controller/StageController.php" />
         <option value="$PROJECT_DIR$/src/ProjectBundle/Controller/TechnologieController.php" />
         <option value="$PROJECT_DIR$/src/ProjectBundle/Controller/VisiteController.php" />
       </list>
@@ -341,6 +343,10 @@
               <option name="myItemId" value="Form" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Type" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -380,8 +386,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\projet_symf3\src\ProjectBundle\Form" />
       <recent name="C:\wamp\www\projet_symf3\src\ProjectBundle\Form\Type" />
+      <recent name="C:\wamp\www\projet_symf3\src\ProjectBundle\Form" />
     </key>
   </component>
   <component name="RunManager">
@@ -457,12 +463,12 @@
       <workItem from="1512126241705" duration="36000" />
       <workItem from="1512142746961" duration="2246000" />
       <workItem from="1512225852857" duration="3374000" />
-      <workItem from="1512405573666" duration="7340000" />
+      <workItem from="1512405573666" duration="7992000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16083000" />
+    <option name="totallyTimeSpent" value="16735000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -495,43 +501,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="131" lean-forward="false" selection-start-line="14" selection-start-column="131" selection-end-line="14" selection-end-column="131" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -586,62 +560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="482">
           <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Form/ClasseType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Form/EleveType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Form/EntrepriseType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Form/EntrepriseTypeType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Form/ReferentPedaType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Form/RegistrationType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Form/StageEleveType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -814,7 +732,7 @@
         <state relative-caret-position="482">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <element signature="e#12#28#0#Twig" expanded="true" />
+            <element signature="e#12#28#0#Twig" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -824,7 +742,7 @@
         <state relative-caret-position="482">
           <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
-            <element signature="e#12#28#0#Twig" expanded="true" />
+            <element signature="e#12#28#0#Twig" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -839,112 +757,209 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Form/ReferentProType.php">
+    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Form/Type/ClasseType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="68" column="44" lean-forward="false" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
+        <state relative-caret-position="17">
+          <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="33" />
           <folding>
-            <element signature="e#39#79#0#PHP" expanded="true" />
+            <element signature="e#44#84#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/IndexController.php">
+    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Form/Type/DiplomeType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="56" lean-forward="false" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+        <state relative-caret-position="34">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/EntrepriseTypeController.php">
+    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Form/Type/EleveType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="73" lean-forward="false" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
+        <state relative-caret-position="34">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/EntrepriseController.php">
+    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Form/Type/EntrepriseType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="65" lean-forward="false" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
+        <state relative-caret-position="34">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/EleveController.php">
+    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Form/Type/EntrepriseTypeType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="56" lean-forward="false" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+        <state relative-caret-position="34">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/DiplomeController.php">
+    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Form/Type/ReferentPedaType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
+        <state relative-caret-position="34">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Form/Type/ReferentProType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <folding>
+            <element signature="e#44#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Form/Type/RegistrationType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Form/Type/StageEleveType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Form/Type/StageType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <folding>
+            <element signature="e#43#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Form/Type/TechnologieType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Form/Type/VisiteType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/ClasseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="57" lean-forward="false" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+        <state relative-caret-position="102">
+          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/DiplomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <element signature="e#44#77#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/EleveController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/EntrepriseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/EntrepriseTypeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="56" lean-forward="false" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+          <folding>
+            <element signature="e#43#75#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/ReferentPedaController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="51" column="97" lean-forward="false" selection-start-line="51" selection-start-column="97" selection-end-line="51" selection-end-column="97" />
+        <state relative-caret-position="85">
+          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/ReferentProController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="76" lean-forward="false" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
+        <state relative-caret-position="85">
+          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/SecurityController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="45" column="23" lean-forward="true" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/StageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="17" column="64" lean-forward="false" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
+        <state relative-caret-position="527">
+          <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
           <folding>
-            <element signature="e#46#103#0#PHP" expanded="true" />
-            <element signature="e#983#995#1#PHP" expanded="true" />
+            <element signature="e#305#350#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/TechnologieController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="16" column="71" lean-forward="false" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+        <state relative-caret-position="53">
+          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/VisiteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="15" column="66" lean-forward="false" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
+        <state relative-caret-position="91">
+          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjectBundle/Controller/StageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding>
+            <element signature="e#988#1000#1#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

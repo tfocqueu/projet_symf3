@@ -4,7 +4,7 @@ namespace ProjectBundle\Controller;
 
 use ProjectBundle\Entity\Classe;
 use ProjectBundle\Entity\Utilisateur;
-use ProjectBundle\Form\ClasseType;
+use ProjectBundle\Form\Type\ClasseType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;

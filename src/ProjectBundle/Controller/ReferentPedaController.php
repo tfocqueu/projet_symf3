@@ -3,7 +3,7 @@
 namespace ProjectBundle\Controller;
 
 use ProjectBundle\Entity\Utilisateur;
-use ProjectBundle\Form\ReferentPedaType;
+use ProjectBundle\Form\Type\ReferentPedaType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;

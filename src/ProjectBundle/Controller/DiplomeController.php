@@ -3,7 +3,7 @@
 namespace ProjectBundle\Controller;
 
 use ProjectBundle\Entity\Diplome;
-use ProjectBundle\Form\DiplomeType;
+use ProjectBundle\Form\Type\DiplomeType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;

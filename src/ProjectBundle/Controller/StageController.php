@@ -8,7 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use ProjectBundle\Entity\Stage;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
-use ProjectBundle\Form\StageType;
+use ProjectBundle\Form\Type\StageType;
 use Symfony\Component\HttpFoundation\Response;
 
 

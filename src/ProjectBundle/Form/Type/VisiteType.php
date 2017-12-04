@@ -1,24 +1,35 @@
 <?php
 
-namespace ProjectBundle\Form;
+namespace ProjectBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class DiplomeType extends AbstractType
+class VisiteType extends AbstractType
 {
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('libelle',TextType::class, [
+        $builder->add('date',DateType::class, [
 
-            'label'       => 'Libelle',
+            'widget' => 'choice',
 
-            'attr'        => [
+            'attr'   => [
+
+            'class'    => 'form-control',
+
+            'required' => true,
+
+            ],])->add('observation',TextareaType::class, [
+
+                'label'       => 'Observation',
+
+                'attr'        => [
 
                 'class'    => 'form-control',
 
@@ -33,7 +44,7 @@ class DiplomeType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'ProjectBundle\Entity\Diplome'
+            'data_class' => 'ProjectBundle\Entity\Visite'
         ));
     }
 
@@ -42,7 +53,7 @@ class DiplomeType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'projectbundle_diplome';
+        return 'projectbundle_visite';
     }
 
 
