@@ -8,11 +8,6 @@ imports:
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
-    rules:
-      symfony.obvious_csrf_key:
-        enabled: true
-      symfony.web_config_should_not_be_present:
-        enabled: true
 
 framework:
     esi: ~
@@ -82,3 +77,9 @@ fos_user:
     from_email:
         address: "thomas.focqueu@hotmail.fr"
         sender_name: "thomas"
+
+rules:
+      symfony.obvious_csrf_key:
+        enabled: true
+      symfony.web_config_should_not_be_present:
+        enabled: true
