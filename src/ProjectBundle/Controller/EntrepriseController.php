@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 class EntrepriseController extends Controller
 {
     /**
-     * @Route("/entreprise",name="entreprise_show")
+     * @Route("/entreprise",name="entreprise_show", methods={"GET","HEAD"})
      *
      *
      */
@@ -43,7 +43,7 @@ class EntrepriseController extends Controller
     }
 
     /**
-     * @route("/show_entreprise/{entreprise}", name="entreprise_show_id")
+     * @route("/show_entreprise/{entreprise}", name="entreprise_show_id", methods={"GET","HEAD"})
      *
      */
     public function showEntrepriseAction(Request $request, Entreprise $entreprise){
@@ -67,7 +67,7 @@ class EntrepriseController extends Controller
     }
 
     /**
-     * @Route("/entreprise/{entreprise}", name="entreprise_delete")
+     * @Route("/entreprise/{entreprise}", name="entreprise_delete", methods={"GET","HEAD"})
      */
     public function deleteAction(Entreprise $entreprise)
     {

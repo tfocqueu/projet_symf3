@@ -14,7 +14,7 @@ class TechnologieController extends Controller
 
 
     /**
-     * @Route("/technologie",name="techno_show")
+     * @Route("/technologie",name="techno_show", methods={"GET","HEAD"})
      *
      *
      */
@@ -47,7 +47,7 @@ class TechnologieController extends Controller
     }
 
     /**
-     * @Route("/technologie/{technologie}", name="techno_delete")
+     * @Route("/technologie/{technologie}", name="techno_delete", methods={"GET","HEAD"})
      */
     public function deleteAction(Technologie $technologie)
     {

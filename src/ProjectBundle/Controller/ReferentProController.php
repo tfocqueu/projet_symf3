@@ -14,7 +14,7 @@ class ReferentProController extends Controller
 {
 
     /**
-     * @Route("/referentpro",name="referentpro_show")
+     * @Route("/referentpro",name="referentpro_show", methods={"GET","HEAD"})
      *
      *
      */

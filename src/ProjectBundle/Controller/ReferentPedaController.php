@@ -14,7 +14,7 @@ class ReferentPedaController extends Controller
 {
 
     /**
-     * @Route("/referentpeda",name="referentpeda_show")
+     * @Route("/referentpeda",name="referentpeda_show", methods={"GET","HEAD"})
      *
      *
      */
@@ -49,7 +49,7 @@ class ReferentPedaController extends Controller
     }
 
     /**
-     * @Route("/referentpeda/{referentpeda}", name="referent_peda_delete")
+     * @Route("/referentpeda/{referentpeda}", name="referent_peda_delete", methods={"GET","HEAD"})
      */
     public function deleteAction(Utilisateur $referentpeda)
     {

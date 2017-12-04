@@ -66,7 +66,7 @@ class ReferentProType extends AbstractType
 
     {
 
-        return 'projectbundle_referentProType';
+        return 'projectbundle_referentProTyp';
 
     }
 

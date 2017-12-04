@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
 class VisiteController extends Controller
 {
     /**
-     * @Route("/visite",name="visite_show")
+     * @Route("/visite",name="visite_show", methods={"GET","HEAD"})
      *
      *
      */
@@ -47,7 +47,7 @@ class VisiteController extends Controller
 
 
     /**
-     * @Route("/visite/{visite}", name="visite_delete")
+     * @Route("/visite/{visite}", name="visite_delete", methods={"GET","HEAD"})
      */
     public function deleteAction(Visite $visite)
     {

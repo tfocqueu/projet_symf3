@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Response;
 class StageController extends Controller
 {
     /**
-     * @Route("/stage",name="stage_show")
+     * @Route("/stage",name="stage_show", methods={"GET","HEAD"})
      */
     public function showAction(Request $request)
     {
@@ -43,7 +43,7 @@ class StageController extends Controller
     }
 
     /**
-     * @Route("/stage/add",name="stage_add" )
+     * @Route("/stage/add",name="stage_add" , methods={"GET","HEAD"})
      *
      */
     public function addAction(Request $request){
@@ -70,7 +70,7 @@ class StageController extends Controller
         return $this->render('@Project/ProjectFront/stageadd.html.twig',array('form'=> $formview));
     }
     /**
-     * @route("/show_stage/{stage}", name="stage_show_id")
+     * @route("/show_stage/{stage}", name="stage_show_id", methods={"GET","HEAD"})
      *
      */
     public function showStageAction(Request $request, Stage $stage)
@@ -90,7 +90,7 @@ class StageController extends Controller
         }
 
     /**
-     * @Route("/stage/{stage}", name="stage_delete")
+     * @Route("/stage/{stage}", name="stage_delete", methods={"GET","HEAD"})
      */
     public function deleteAction(Stage $stage)
     {

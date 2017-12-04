@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
 class ClasseController extends Controller
 {
     /**
-     * @Route("/classe",name="classe_show")
+     * @Route("/classe",name="classe_show", methods={"GET","HEAD"})
      *
      *
      */
@@ -43,7 +43,7 @@ class ClasseController extends Controller
     }
 
     /**
-     * @Route("/classe/add",name="classe_add" )
+     * @Route("/classe/add",name="classe_add", methods={"POST","HEAD"} )
      *
      */
     public function addAction(Request $request){
@@ -62,7 +62,7 @@ class ClasseController extends Controller
     }
 
     /**
-     * @route("/show_classe/{classe}", name="classe_show_id")
+     * @route("/show_classe/{classe}", name="classe_show_id", methods={"GET","HEAD"})
      *
      */
     public function showClasseAction(Request $request, Classe $classe){
@@ -88,7 +88,7 @@ class ClasseController extends Controller
     }
 
     /**
-     * @Route("/classe/{classe}", name="classe_delete")
+     * @Route("/classe/{classe}", name="classe_delete", methods={"GET","HEAD"})
      */
     public function deleteAction(Classe $classe)
     {
@@ -100,7 +100,7 @@ class ClasseController extends Controller
     }
 
     /**
-     * @Route("/classe/add/{classe}/{eleve}",name="classe_eleve_add")
+     * @Route("/classe/add/{classe}/{eleve}",name="classe_eleve_add", methods={"GET","HEAD"})
      */
     public function  addEleveClasseAction(Classe $classe, Utilisateur $eleve){
         $em = $this->getDoctrine()->getManager();
@@ -111,7 +111,7 @@ class ClasseController extends Controller
     }
 
     /**
-     * @Route("/classe/delete/{classe}/{eleve}",name="classe_eleve_delete")
+     * @Route("/classe/delete/{classe}/{eleve}",name="classe_eleve_delete", methods={"GET","HEAD"})
      */
     public  function  deleteEleveAction(Classe $classe, Utilisateur $eleve){
         $em = $this->getDoctrine()->getManager();

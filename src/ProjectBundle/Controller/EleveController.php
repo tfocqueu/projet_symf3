@@ -17,7 +17,7 @@ class EleveController extends Controller
 {
 
     /**
-     * @Route("/eleve",name="eleve_show")
+     * @Route("/eleve",name="eleve_show" , methods={"GET","HEAD"})
      *
      *
      */
@@ -52,7 +52,7 @@ class EleveController extends Controller
     }
 
     /**
-     * @route("/show_eleve/{eleve}", name="eleve_show_id")
+     * @route("/show_eleve/{eleve}", name="eleve_show_id", methods={"GET","HEAD"})
      *
      */
     public function showEleveAction(Request $request, Utilisateur $eleve){
@@ -76,7 +76,7 @@ class EleveController extends Controller
     }
 
     /**
-     * @Route("/eleve/{eleve}", name="eleve_delete")
+     * @Route("/eleve/{eleve}", name="eleve_delete", methods={"GET","HEAD"})
      */
     public function deleteAction(Utilisateur $eleve)
     {
@@ -88,7 +88,7 @@ class EleveController extends Controller
     }
 
     /**
-     * @Route("/eleve/add/stage/{eleve}/{stage}",name="add_stage_eleve")
+     * @Route("/eleve/add/stage/{eleve}/{stage}",name="add_stage_eleve", methods={"GET","HEAD"})
      */
     public function addStageEleveAction(Utilisateur $eleve, Stage $stage)
     {
@@ -100,7 +100,7 @@ class EleveController extends Controller
 
     }
     /**
-     * @Route("/eleve/delete/{eleve}/{stage}", name="stage_eleve_delete")
+     * @Route("/eleve/delete/{eleve}/{stage}", name="stage_eleve_delete", methods={"GET","HEAD"})
      */
     public function deleteStageEleveAction(Utilisateur $eleve, Stage $stage)
     {
