@@ -79,7 +79,9 @@ fos_user:
         sender_name: "thomas"
 
 rules:
-      symfony.obvious_csrf_key:
-        enabled: true
-      symfony.web_config_should_not_be_present:
-        enabled: true
+    symfony.obvious_csrf_key:
+      enabled: true
+    symfony.web_config_should_not_be_present:
+      enabled: true
+    doctrine.database_query_contains_string_and_variable_concatenation:
+      enabled: true
