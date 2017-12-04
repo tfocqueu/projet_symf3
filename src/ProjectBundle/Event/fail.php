@@ -17,9 +17,7 @@ use Symfony\Component\Security\Core\Event\AuthenticationFailureEvent;
 class fail implements EventSubscriberInterface
 {
     const MAX_LOGIN_FAILURE_ATTEMPTS = 5;
-    private $request;
     private $requestStack;
-    private $router;
     private $em;
 
     public function __construct( RequestStack $requestStack, ObjectManager $em)
