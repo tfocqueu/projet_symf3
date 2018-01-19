@@ -2,6 +2,7 @@
 
 namespace ProjectBundle\Controller;
 
+use Doctrine\DBAL\DBALException;
 use Monolog\Handler\Curl\Util;
 use ProjectBundle\Entity\Stage;
 use ProjectBundle\Entity\Utilisateur;
@@ -16,7 +17,7 @@ class EleveController extends Controller
 {
 
     /**
-     * @Route("/eleve",name="eleve_show" , methods={"GET","HEAD"})
+     * @Route("/eleve",name="eleve_show")
      *
      *
      */
@@ -51,7 +52,7 @@ class EleveController extends Controller
     }
 
     /**
-     * @route("/show_eleve/{eleve}", name="eleve_show_id", methods={"GET","HEAD"})
+     * @route("/show_eleve/{eleve}", name="eleve_show_id")
      *
      */
     public function showEleveAction(Request $request, Utilisateur $eleve){
@@ -75,7 +76,7 @@ class EleveController extends Controller
     }
 
     /**
-     * @Route("/eleve/{eleve}", name="eleve_delete", methods={"GET","HEAD"})
+     * @Route("/eleve/{eleve}", name="eleve_delete")
      */
     public function deleteAction(Utilisateur $eleve)
     {
@@ -87,19 +88,28 @@ class EleveController extends Controller
     }
 
     /**
-     * @Route("/eleve/add/stage/{eleve}/{stage}",name="add_stage_eleve", methods={"GET","HEAD"})
+     * @Route("/eleve/add/stage/{eleve}/{stage}",name="add_stage_eleve")
      */
     public function addStageEleveAction(Utilisateur $eleve, Stage $stage)
     {
-        $em = $this->getDoctrine()->getManager();
+        try {
+            $em = $this->getDoctrine()->getManager();
             $eleve->addStage($stage);
             $em->persist($eleve);
             $em->flush();
-        return $this->redirectToRoute('eleve_show');
+            return $this->redirectToRoute('eleve_show');
+        }
+        catch(DBALException $e){
+            $this->get('session')->getFlashBag()->add('error', 'Le stage a déjà été ajouté à l\'élève');
+            return $this->redirect($this->generateUrl('eleve_show'));
+
+        }
+
+
 
     }
     /**
-     * @Route("/eleve/delete/{eleve}/{stage}", name="stage_eleve_delete", methods={"GET","HEAD"})
+     * @Route("/eleve/delete/{eleve}/{stage}", name="stage_eleve_delete")
      */
     public function deleteStageEleveAction(Utilisateur $eleve, Stage $stage)
     {

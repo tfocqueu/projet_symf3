@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class IndexController extends Controller
 {
     /**
-     * @Route("/", name="accueil", methods={"GET","HEAD"})
+     * @Route("/", name="accueil")
      *
      *
      */

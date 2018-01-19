@@ -14,7 +14,7 @@ class DiplomeController extends Controller
 
 
     /**
-     * @Route("/diplome",name="diplome_show" , methods={"GET","HEAD"})
+     * @Route("/diplome",name="diplome_show")
      *
      *
      */
@@ -48,7 +48,7 @@ class DiplomeController extends Controller
 
 
     /**
-     * @Route("/diplome/{diplome}", name="diplome_delete" , methods={"GET","HEAD"})
+     * @Route("/diplome/{diplome}", name="diplome_delete")
      */
     public function deleteAction(Diplome $diplome)
     {

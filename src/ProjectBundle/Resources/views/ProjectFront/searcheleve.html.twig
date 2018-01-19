@@ -6,15 +6,11 @@
         <h2>Rechercher un élève</h2>
         <table>
             <thead>
-            <th>ID</th>
             <th>Nom élève</th>
             <th>Action</th>
             </thead>
             {% for eleve in lesEleves %}
                 <tr>
-                    <td>
-                        {{ eleve.id }}
-                    </td>
                     <td>
                         <a href={{ path('eleve_show_id', {'eleve' : eleve.id }) }}> {{ eleve.nom }}</a>
                     </td>
